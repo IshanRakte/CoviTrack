@@ -5,16 +5,6 @@ import 'package:covitrack/cities/delhi.dart';
 import 'package:covitrack/cities/kolkata.dart';
 import 'package:covitrack/cities/bangalore.dart';
 
-
-
-// void main() {
-//   runApp(MaterialApp(
-//     debugShowCheckedModeBanner: false,
-
-//     home: Emergency(),
-//   ));
-// }
-
 class Emergency extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
