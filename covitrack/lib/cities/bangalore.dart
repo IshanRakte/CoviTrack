@@ -37,209 +37,264 @@ class _BangaloreState extends State<Bangalore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Bangalore',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.blue,
-      ),
+      // appBar: AppBar(
+      //   title: Text(
+      //     'Bangalore',
+      //     style: TextStyle(color: Colors.white),
+      //   ),
+      //   backgroundColor: Colors.blue,
+      // ),
       
-      body: SingleChildScrollView(                    //---> scroll view
-        physics: BouncingScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.all(14.0),
-          child: Container(
-            child: Center(
-              child: Column(
-                children: [
-                  SizedBox(height: 15.0),
-                  Card(
-                    color: Colors.orangeAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                    ),
-                    child: Container(
-                      width: 370,
-                      padding: EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Government",
-                            style: TextStyle(
-                                color: Colors.green[600],
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text("Victoria Hospital",
+      body: SafeArea(
+        child: Column(
+          children: [
+            SizedBox(height: 5,),
+                        Row(
+                          children: [
+                            Row(
+                              children: [
+                                IconButton(
+                                  onPressed: (){
+                                    Navigator.pop(context);
+                                  }, 
+                                  icon: Icon(Icons.arrow_back_ios_new,),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 10,),
+                            Text(
+                              'Bangalore',
                               style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
-                          SizedBox(height: 5),
-                          Text(
-                            "Address: Fort Rd, near City Market, New Tharagupet, Bengaluru, Karnataka 560002",
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          Container(
-                            height: 40,
-                            child: TextButton(
-                              child: const Text(
-                                'Open In Google Maps',
-                                style: TextStyle(color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22,
+                                color: Colors.black
                               ),
-                              onPressed: () {
-                                setState(() {
-                                  _launched = _launchUniversalLinkIos(
-                                      'https://www.google.com/maps/dir//victoria+hospital+bangalore/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae15e2d61081e7:0x6e7d0833b6fa721e!2m2!1d77.5738074!2d12.9635669');
-                                });
-                              },
                             ),
-                          ),
-                          Container(
-                            height: 30,
-                            child: TextButton(
-                              child: const Text('Call',
-                                  style: TextStyle(fontSize: 15)),
-                              onPressed: () {
-                                setState(() {
-                                  _launched = _makePhoneCall('tel:080 2670 1150');
-                                });
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 15.0),
-                  Card(
-                    color: Colors.orangeAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                    ),
-                    child: Container(
-                      width: 370,
-                      padding: EdgeInsets.all(10),
+                          ],
+                        ),
+                        Divider(
+                          height: 10,
+                          thickness: 5,
+                          indent: 20,
+                          endIndent: 20,
+                          color: Colors.black,
+                        ),
+              
+            Expanded(
+              child: SingleChildScrollView(                    //---> scroll view
+                physics: BouncingScrollPhysics(),
+                child: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: Container(
+                    child: Center(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
-                            "Private",
-                            style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text("Apollo Hospital Sheshadripuram",
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
-                          SizedBox(height: 5),
-                          Text(
-                            "Address: No. 1, Old No. 28, Platform Road Near Mantri Square Mall, Seshadripuram, Bengaluru, Karnataka 560020",
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          Container(
-                            height: 40,
-                            child: TextButton(
-                              child: const Text('Open In Google Maps'),
-                              onPressed: () {
-                                setState(() {
-                                  _launched = _launchUniversalLinkIos(
-                                      'https://www.google.com/maps/dir//Apollo+Hospitals+Sheshadripuram+Bangalore,+No.+1,+Old+No.+28,+Platform+Road+Near+Mantri+Square+Mall,+Seshadripuram,+Bengaluru,+Karnataka+560020//data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae17ddf4a463e3:0x415a988bfb0b66c8!2m2!1d77.5726879!2d12.9883022');
-                                });
-                              },
+                          SizedBox(height: 15.0),
+                          Card(
+                            elevation: 6,
+                            shadowColor: Colors.green,
+                            clipBehavior: Clip.antiAlias,
+
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                              
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(colors: [ Colors.green,Colors.green.shade800],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,)
+                              ),
+                              width: 370,
+                              padding: EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Government",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,letterSpacing: 1.5),
+                                  ),
+                                  Text("Victoria Hospital",
+                                      style: TextStyle(
+                                          fontSize: 22, fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Address: Fort Rd, near City Market, New Tharagupet, Bengaluru, Karnataka 560002",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//victoria+hospital+bangalore/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae15e2d61081e7:0x6e7d0833b6fa721e!2m2!1d77.5738074!2d12.9635669');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(fontSize: 15,color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall('tel:080 2670 1150');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                          Container(
-                            height: 30,
-                            child: TextButton(
-                              child: const Text('Call',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                  )),
-                              onPressed: () {
-                                setState(() {
-                                  _launched = _makePhoneCall('tel:080 4668 8888');
-                                });
-                              },
+                          SizedBox(height: 15.0),
+                          Card(
+                            elevation: 6,
+                            shadowColor: Colors.red,
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                              
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [ Colors.redAccent,Colors.red.shade900],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                )),
+                              width: 370,
+                              padding: EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Private",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,letterSpacing: 1.5),
+                                  ),
+                                  Text("Apollo Hospital Sheshadripuram",
+                                      style: TextStyle(
+                                          fontSize: 22, fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Address: No. 1, Old No. 28, Platform Road Near Mantri Square Mall, Seshadripuram, Bengaluru, Karnataka 560020",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//Apollo+Hospitals+Sheshadripuram+Bangalore,+No.+1,+Old+No.+28,+Platform+Road+Near+Mantri+Square+Mall,+Seshadripuram,+Bengaluru,+Karnataka+560020//data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae17ddf4a463e3:0x415a988bfb0b66c8!2m2!1d77.5726879!2d12.9883022');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            color: Colors.white
+                                          )),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall('tel:080 4668 8888');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          Card(
+                            elevation: 6,
+                            shadowColor: Colors.red,
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [ Colors.redAccent,Colors.red.shade900],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                )),
+                              width: 370,
+                              padding: EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Private",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,letterSpacing: 1.5),
+                                  ),
+                                  Text("Aster CMI Hospital",
+                                      style: TextStyle(
+                                          fontSize: 22, fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Address: #43/2, New Airport Road, NH-7, Outer Ring Rd, Sahakar Nagar, Bengaluru, Karnataka 560092",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.co.in/maps/dir//aster+cmi+hospital/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae1789755331d3:0x622ebc0aa55f732c!2m2!1d77.5919226!2d13.054743');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(fontSize: 15,color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched =
+                                              _makePhoneCall('tel:080 4342 0100');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
-                  Card(
-                    color: Colors.orangeAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                    ),
-                    child: Container(
-                      width: 370,
-                      padding: EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Private",
-                            style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text("Aster CMI Hospital",
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
-                          SizedBox(height: 5),
-                          Text(
-                            "Address: #43/2, New Airport Road, NH-7, Outer Ring Rd, Sahakar Nagar, Bengaluru, Karnataka 560092",
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          Container(
-                            height: 40,
-                            child: TextButton(
-                              child: const Text('Open In Google Maps'),
-                              onPressed: () {
-                                setState(() {
-                                  _launched = _launchUniversalLinkIos(
-                                      'https://www.google.co.in/maps/dir//aster+cmi+hospital/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae1789755331d3:0x622ebc0aa55f732c!2m2!1d77.5919226!2d13.054743');
-                                });
-                              },
-                            ),
-                          ),
-                          Container(
-                            height: 30,
-                            child: TextButton(
-                              child: const Text('Call',
-                                  style: TextStyle(fontSize: 15)),
-                              onPressed: () {
-                                setState(() {
-                                  _launched =
-                                      _makePhoneCall('tel:080 4342 0100');
-                                });
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

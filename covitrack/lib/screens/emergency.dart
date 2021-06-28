@@ -221,6 +221,7 @@ class Emergency extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                 //---> card with inkwell
                 child: InkWell(
                   
                   borderRadius: BorderRadius.circular(10),
