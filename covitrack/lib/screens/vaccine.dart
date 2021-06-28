@@ -13,21 +13,13 @@ class _VaccineInfoState extends State<VaccineInfo> {
     return Scaffold(
 
       appBar: AppBar(
-        backgroundColor: Colors.purple,
-        leading: IconButton(icon: Icon(Icons.menu), onPressed: () {
-
-        }),
-        title: Text("VACCINE INFORMATION"),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.search), onPressed: () {
-
-          }),
-        ],
+        backgroundColor: Colors.tealAccent[700],
+        title: Text("Vaccine Information"),
       ),
       body:Container(
          decoration: BoxDecoration(
            gradient: LinearGradient(
-             colors: [Colors.purple.shade300,Colors.blueAccent],
+             colors: [Colors.greenAccent.shade400, Colors.blue],
              begin: Alignment.topLeft,
              end: Alignment.bottomRight
            )
@@ -38,11 +30,11 @@ class _VaccineInfoState extends State<VaccineInfo> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("Information about COVISHIELD , COVAXIN and SPUTNIK-V",
+            Text("Information about COVISHIELD, COVAXIN and SPUTNIK-V",
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold
+              fontSize: 28,
+              fontWeight: FontWeight.w500
             ),),
             SizedBox(height: 40,),
             ElevatedButton(
@@ -58,7 +50,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)
                 ),
-                primary: Colors.blue,
+                primary: Colors.lightBlueAccent,
                   padding:EdgeInsets.all(38),
 
 
@@ -80,7 +72,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                 shadowColor: Colors.black,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
-                  primary: Colors.cyan,
+                  primary: Colors.blue,
                 padding:EdgeInsets.all(45),),
               onPressed: () {
                 Navigator.push(context,
@@ -98,7 +90,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                   shadowColor: Colors.black,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  primary: Colors.lightBlueAccent,
+                  primary: Colors.blueAccent,
                   padding:EdgeInsets.all(41)
               ),
               onPressed: () {

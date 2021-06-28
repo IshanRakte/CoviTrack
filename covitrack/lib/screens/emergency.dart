@@ -14,13 +14,20 @@ class Emergency extends StatelessWidget {
           'Emergency',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(218, 0, 55, 1),
+        backgroundColor: Colors.red[400],
       ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+          colors: [Color.fromRGBO(250, 18, 18, 1), Color.fromRGBO(129, 0, 0,1)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        )
+        ),
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 15.0),
+              SizedBox(height: 30.0),
               Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -60,7 +67,7 @@ class Emergency extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15.0),
+              SizedBox(height: 20.0),
               Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -98,7 +105,7 @@ class Emergency extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 20),
               Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -136,7 +143,7 @@ class Emergency extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15.0),
+              SizedBox(height: 20),
               Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -174,7 +181,7 @@ class Emergency extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15.0),
+              SizedBox(height: 20),
               Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -212,38 +219,7 @@ class Emergency extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    width: 2,
-                    color: Colors.black,
-                  ),
-                ),
-                 //---> card with inkwell
-                child: InkWell(
-                  
-                  borderRadius: BorderRadius.circular(10),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Delhi()));
-                  },
-                  child: Container(
-
-                    width: 370,
-                    height: 40,
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'Delhi  >',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            
             ],
           ),
         ),
