@@ -37,181 +37,187 @@ class _PuneState extends State<Pune> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Pune', style: TextStyle(color: Colors.white),),backgroundColor: Colors.blue,),
-      body: Container(
-        
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(height: 15.0),
-              Card(
-                color: Colors.orangeAccent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    width: 2,
-                    color: Colors.black,
-                  ),
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Colors.green[900], Colors.green[50]],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,)
-                  ),
-                  width: 370,
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Government",style: TextStyle(color: Colors.green[600], fontSize: 25, fontWeight: FontWeight.bold  ),),
-                      Text("Poona Hospital", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
-                      SizedBox(height:5),
-                      Text(
-                        "Address: 27, Sadashiv Peth, Neighbor of Alka Talkies, Pune, Maharashtra 411030",
-                        style: TextStyle(fontSize: 18),
+     
+      body: SingleChildScrollView(                  //---> scroll view, padding
+        physics: BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Container(
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(height: 15.0),
+                  Card(
+                    color: Colors.orangeAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(
+                        width: 2,
+                        color: Colors.black,
                       ),
-                      Container(
-                        height: 40,
-                      child: TextButton(
-                          child: const Text('Open In Google Maps', style: TextStyle(color: Colors.blue), ),
-                          onPressed: () {
-                            setState(() {
-                              _launched = _launchUniversalLinkIos(
-                                  'https://www.google.com/maps/dir//poona+hospital/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2c075f909f913:0x54d12ea7498c2ebe!2m2!1d73.8420697!2d18.5108143');
-                            });
-                          },
-                        ),
-                        
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [Colors.green[900], Colors.green[50]],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,)
                       ),
-                      Container(
-                        height: 30,
-                        child: TextButton(
-                          child: const Text('Call',
-                              style: TextStyle(fontSize: 15)),
-                          onPressed: () {
-                            setState(() {
-                              _launched =
-                                  _makePhoneCall('tel:(020) 24331706');
-                            });
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 15.0),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    width: 2,
-                    color: Colors.black,
-                  ),
-                ),
-                child: Container(
-                  
-                  
-                  width: 370,
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Private",style: TextStyle(color: Colors.red, fontSize: 25, fontWeight: FontWeight.bold  ),),
-                      Text("Jehangir Hospital",
-                          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
+                      width: 370,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Government",style: TextStyle(color: Colors.green[600], fontSize: 25, fontWeight: FontWeight.bold  ),),
+                          Text("Poona Hospital", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
                           SizedBox(height:5),
-                      Text(
-                        "Address: 32, Sasoon Road Opposite Railway Station, Central Excise Colony, Sangamvadi, Pune, Maharashtra 411001",
-                        style: TextStyle(fontSize: 18),
+                          Text(
+                            "Address: 27, Sadashiv Peth, Neighbor of Alka Talkies, Pune, Maharashtra 411030",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Container(
+                            height: 40,
+                          child: TextButton(
+                              child: const Text('Open In Google Maps', style: TextStyle(color: Colors.blue), ),
+                              onPressed: () {
+                                setState(() {
+                                  _launched = _launchUniversalLinkIos(
+                                      'https://www.google.com/maps/dir//poona+hospital/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2c075f909f913:0x54d12ea7498c2ebe!2m2!1d73.8420697!2d18.5108143');
+                                });
+                              },
+                            ),
+                            
+                          ),
+                          Container(
+                            height: 30,
+                            child: TextButton(
+                              child: const Text('Call',
+                                  style: TextStyle(fontSize: 15)),
+                              onPressed: () {
+                                setState(() {
+                                  _launched =
+                                      _makePhoneCall('tel:(020) 24331706');
+                                });
+                              },
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        height: 40,
-                        child: TextButton(
-                          child: const Text('Open In Google Maps'),
-                          onPressed: () {
-                            setState(() {
-                              _launched = _launchUniversalLinkIos(
-                                  'https://www.google.com/maps/dir//jehangir+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bc2c05816d29283:0xfe98c3452724e113?sa=X&ved=2ahUKEwjagrLg_7bxAhVnH7cAHasjDfoQ9RcwJXoECGEQBQ');
-                            });
-                          },
-                        ),
-                      ),
-                      Container(
-                        height: 30,
-                        child: TextButton(
-                          child: const Text('Call',
-                              style: TextStyle(fontSize: 15,)),
-                          onPressed: () {
-                            setState(() {
-                              _launched = _makePhoneCall('tel:+912066819999');
-                            });
-                          },
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                  SizedBox(height: 15.0),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(
+                        width: 2,
+                        color: Colors.black,
+                      ),
+                    ),
+                    child: Container(
+                      
+                      
+                      width: 370,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Private",style: TextStyle(color: Colors.red, fontSize: 25, fontWeight: FontWeight.bold  ),),
+                          Text("Jehangir Hospital",
+                              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
+                              SizedBox(height:5),
+                          Text(
+                            "Address: 32, Sasoon Road Opposite Railway Station, Central Excise Colony, Sangamvadi, Pune, Maharashtra 411001",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Container(
+                            height: 40,
+                            child: TextButton(
+                              child: const Text('Open In Google Maps'),
+                              onPressed: () {
+                                setState(() {
+                                  _launched = _launchUniversalLinkIos(
+                                      'https://www.google.com/maps/dir//jehangir+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bc2c05816d29283:0xfe98c3452724e113?sa=X&ved=2ahUKEwjagrLg_7bxAhVnH7cAHasjDfoQ9RcwJXoECGEQBQ');
+                                });
+                              },
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            child: TextButton(
+                              child: const Text('Call',
+                                  style: TextStyle(fontSize: 15,)),
+                              onPressed: () {
+                                setState(() {
+                                  _launched = _makePhoneCall('tel:+912066819999');
+                                });
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height:15),
+                  Card(
+                    color: Colors.orangeAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(
+                        width: 2,
+                        color: Colors.black,
+                      ),
+                    ),
+                    child: Container(
+                                        decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [Colors.red[900], Colors.red[50]],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,)
+                      ),
+                      width: 370,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Private",style: TextStyle(color: Colors.red, fontSize: 25, fontWeight: FontWeight.bold  ),),
+                          Text("KEM Hospital",
+                              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
+                              SizedBox(height:5),
+                          Text(
+                            "Address: 489, Rasta Peth, Sardar Moodliar Road, Pune, 411011.",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Container(
+                            height: 40,
+                            child: TextButton(
+                              child: const Text('Open In Google Maps'),
+                              onPressed: () {
+                                setState(() {
+                                  _launched = _launchUniversalLinkIos(
+                                      'https://www.google.com/maps/dir//kem+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bc2c067a2fd93e1:0x1d019a52420f9b1b?sa=X&ved=2ahUKEwiGro37_7bxAhX07XMBHR5bBQEQ9RcwJnoECFMQBQ');
+                                });
+                              },
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            child: TextButton(
+                              child: const Text('Call',
+                                  style: TextStyle(fontSize: 15)),
+                              onPressed: () {
+                                setState(() {
+                                  _launched = _makePhoneCall('tel:+91 20 2621 7300');
+                                });
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+      
+                ],
               ),
-              SizedBox(height:15),
-              Card(
-                color: Colors.orangeAccent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    width: 2,
-                    color: Colors.black,
-                  ),
-                ),
-                child: Container(
-                                    decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Colors.red[900], Colors.red[50]],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,)
-                  ),
-                  width: 370,
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Private",style: TextStyle(color: Colors.red, fontSize: 25, fontWeight: FontWeight.bold  ),),
-                      Text("KEM Hospital",
-                          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
-                          SizedBox(height:5),
-                      Text(
-                        "Address: 489, Rasta Peth, Sardar Moodliar Road, Pune, 411011.",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Container(
-                        height: 40,
-                        child: TextButton(
-                          child: const Text('Open In Google Maps'),
-                          onPressed: () {
-                            setState(() {
-                              _launched = _launchUniversalLinkIos(
-                                  'https://www.google.com/maps/dir//kem+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bc2c067a2fd93e1:0x1d019a52420f9b1b?sa=X&ved=2ahUKEwiGro37_7bxAhX07XMBHR5bBQEQ9RcwJnoECFMQBQ');
-                            });
-                          },
-                        ),
-                      ),
-                      Container(
-                        height: 30,
-                        child: TextButton(
-                          child: const Text('Call',
-                              style: TextStyle(fontSize: 15)),
-                          onPressed: () {
-                            setState(() {
-                              _launched = _makePhoneCall('tel:+91 20 2621 7300');
-                            });
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-            ],
+            ),
           ),
         ),
       ),
