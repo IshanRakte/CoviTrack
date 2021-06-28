@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:covitrack/cities/pune.dart';
 import 'package:covitrack/cities/mumbai.dart';
@@ -16,7 +14,7 @@ class Emergency extends StatelessWidget {
           'Emergency',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Color.fromRGBO(218, 0, 55, 1),
       ),
       body: Container(
         child: Center(

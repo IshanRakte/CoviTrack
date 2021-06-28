@@ -38,6 +38,7 @@ class _PuneState extends State<Pune> {
     return Scaffold(
       appBar: AppBar(title: Text('Pune', style: TextStyle(color: Colors.white),),backgroundColor: Colors.blue,),
       body: Container(
+        
         child: Center(
           child: Column(
             children: [
@@ -52,6 +53,11 @@ class _PuneState extends State<Pune> {
                   ),
                 ),
                 child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [Colors.green[900], Colors.green[50]],
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,)
+                  ),
                   width: 370,
                   padding: EdgeInsets.all(10),
                   child: Column(
@@ -96,7 +102,6 @@ class _PuneState extends State<Pune> {
               ),
               SizedBox(height: 15.0),
               Card(
-                color: Colors.orangeAccent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                   side: BorderSide(
@@ -105,6 +110,8 @@ class _PuneState extends State<Pune> {
                   ),
                 ),
                 child: Container(
+                  
+                  
                   width: 370,
                   padding: EdgeInsets.all(10),
                   child: Column(
@@ -115,7 +122,7 @@ class _PuneState extends State<Pune> {
                           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold )),
                           SizedBox(height:5),
                       Text(
-                        "Address: 32, Sasoon Road Opposite Railway Station, CentralExcise Colony, Sangamvadi, Pune, Maharashtra 411001",
+                        "Address: 32, Sasoon Road Opposite Railway Station, Central Excise Colony, Sangamvadi, Pune, Maharashtra 411001",
                         style: TextStyle(fontSize: 18),
                       ),
                       Container(
@@ -157,6 +164,11 @@ class _PuneState extends State<Pune> {
                   ),
                 ),
                 child: Container(
+                                    decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [Colors.red[900], Colors.red[50]],
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,)
+                  ),
                   width: 370,
                   padding: EdgeInsets.all(10),
                   child: Column(
