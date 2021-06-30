@@ -12,10 +12,10 @@ class _VaccineInfoState extends State<VaccineInfo> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-        backgroundColor: Colors.tealAccent[700],
-        title: Text("Vaccine Information"),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.tealAccent[700],
+      //   title: Text("Vaccine Information"),
+      // ),
       body:Container(
          decoration: BoxDecoration(
            gradient: LinearGradient(
@@ -26,81 +26,114 @@ class _VaccineInfoState extends State<VaccineInfo> {
          ),
 
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text("Information about COVISHIELD, COVAXIN and SPUTNIK-V",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w500
-            ),),
-            SizedBox(height: 40,),
-            ElevatedButton(
-
-
-              child: Text('Covishield',
-                  style: TextStyle(
-                    color: Colors.white,
-                  )
-              ),
-              style: ElevatedButton.styleFrom( elevation: 15,
-                shadowColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 5,),
+                        Row(
+                          children: [
+                            Row(
+                              children: [
+                                IconButton(
+                                  onPressed: (){
+                                    Navigator.pop(context);
+                                  }, 
+                                  icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 10,),
+                            Text(
+                              'Vaccine Info',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 28,
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                        Divider(
+                          height: 30,
+                          thickness: 5,
+                          indent: 20,
+                          endIndent: 20,
+                          color: Colors.white,
+                        ),
+                        SizedBox(height: 20,),
+              Text("Information about COVISHIELD, COVAXIN and SPUTNIK-V",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.w500
+              ),),
+              SizedBox(height: 40,),
+              ElevatedButton(
+        
+        
+                child: Text('Covishield',
+                    style: TextStyle(
+                      color: Colors.white,
+                    )
                 ),
-                primary: Colors.lightBlueAccent,
-                  padding:EdgeInsets.all(38),
-
-
-               ),
-
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Covishield()));
-              },
-            ),
-            SizedBox(height: 30,),
-            ElevatedButton(
-              child: Text("Covaxin",
-                  style: TextStyle(
-                    color: Colors.white,
-                  )
-              ),
-              style: ElevatedButton.styleFrom( elevation: 15,
-                shadowColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-                  primary: Colors.blue,
-                padding:EdgeInsets.all(45),),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Covaxin()));
-              },
-            ),
-            SizedBox(height: 30,),
-            ElevatedButton(
-              child: Text("Sputnik-V",
-                  style: TextStyle(
-                    color: Colors.white,
-                  )
-              ),
-              style: ElevatedButton.styleFrom( elevation: 15,
+                style: ElevatedButton.styleFrom( elevation: 15,
                   shadowColor: Colors.black,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  primary: Colors.blueAccent,
-                  padding:EdgeInsets.all(41)
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  primary: Colors.lightBlueAccent,
+                    padding:EdgeInsets.all(38),
+        
+        
+                 ),
+        
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Covishield()));
+                },
               ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Sputnik()));
-              },
-            ),
-
-
-          ],
+              SizedBox(height: 30,),
+              ElevatedButton(
+                child: Text("Covaxin",
+                    style: TextStyle(
+                      color: Colors.white,
+                    )
+                ),
+                style: ElevatedButton.styleFrom( elevation: 15,
+                  shadowColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                    primary: Colors.blue,
+                  padding:EdgeInsets.all(45),),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Covaxin()));
+                },
+              ),
+              SizedBox(height: 30,),
+              ElevatedButton(
+                child: Text("Sputnik-V",
+                    style: TextStyle(
+                      color: Colors.white,
+                    )
+                ),
+                style: ElevatedButton.styleFrom( elevation: 15,
+                    shadowColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    primary: Colors.blueAccent,
+                    padding:EdgeInsets.all(41)
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Sputnik()));
+                },
+              ),
+        
+        
+            ],
+          ),
         ),
       ),
     );
