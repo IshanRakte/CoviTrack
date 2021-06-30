@@ -190,15 +190,13 @@ Widget buildText(BuildContext context) => ExpansionTile(
     ),
   ),
   children: [
-    Row(
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '- Fever\n- Dry cough\n- Tiredness\n- Loss of taste and smell',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        Text('- Fever',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Dry cough',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Tiredness',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Loss of taste and smell',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
       ],
     ),
   ],
@@ -214,15 +212,14 @@ Widget buildText1(BuildContext context) => ExpansionTile(
     ),
   ),
   children: [
-    Row(
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '- Difficulty in breathing\n- Chest pain or pressure\n- Aches and pains\n- Sore throat\n- Headache',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        Text('- Difficulty in breathing',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Chest pain or pressure',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Aches and pains',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Sore throat',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Headache',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
       ],
     ),
   ],
@@ -238,15 +235,14 @@ Widget buildText2(BuildContext context) => ExpansionTile(
     ),
   ),
   children: [
-    Row(
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '- Diarrhoea\n- Conjunctivitis\n- Loss of speech or movement\n- A rash on skin\n- Discolouration of fingers or toes',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        Text('- Diarrhoea',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Conjunctivitis',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Loss of speech or movement',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- A rash on skin',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
+        Text('- Discolouration of fingers or toes',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
       ],
     ),
   ],
