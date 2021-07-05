@@ -54,14 +54,14 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.purple.shade300, Colors.blueAccent],
+                colors: [Color.fromRGBO(255, 148, 130, 1), Color.fromRGBO(125, 119, 255, 1)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight)),
         alignment: Alignment.center,
         child: Column(
           children: [
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Text(
               'COVISHIELD',
@@ -71,6 +71,7 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            Text(''),
             Text(''),
             Text(''),
             Text(
@@ -171,9 +172,10 @@ class _HomePageState extends State<HomePage> {
                         borderSide: BorderSide.none)),
               ),
             ),
-            SizedBox(height:15),
+            SizedBox(height: 15),
             Center(
-              child: Text(str == null ? "" : "${str.toString()}",style: TextStyle(
+              child: Text(str == null ? "" : "${str.toString()}",
+                  style: TextStyle(
                       fontSize: 18,
                       color: Colors.black,
                       fontWeight: FontWeight.w500)),

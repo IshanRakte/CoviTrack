@@ -54,7 +54,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.purple.shade300, Colors.blueAccent],
+                colors: [Color.fromRGBO(255, 148, 130, 1), Color.fromRGBO(125, 119, 255, 1)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight)),
         alignment: Alignment.center,
