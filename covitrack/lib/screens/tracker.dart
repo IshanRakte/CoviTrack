@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:covitrack/models/tcases.dart';
+import 'package:covitrack/world_countrywise.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -315,6 +316,25 @@ class _CaseTrackerState extends State<CaseTracker> {
                   ),
                 ),
 
+                // --> remove the TextButton from here (once added to bottom navigation)
+                Center(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+              return World();
+            }));
+                    },
+                    child: Text(
+                      'Countrywise stats',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                // --> remove the TextButton from here (once added to bottom navigation)
+                
                 //
               ],
             ),
