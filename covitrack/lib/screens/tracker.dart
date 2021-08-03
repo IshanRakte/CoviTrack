@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:covitrack/models/tcases.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -20,6 +19,19 @@ class _CaseTrackerState extends State<CaseTracker> {
     } else {
       throw Exception('try to reload');
     }
+  }
+
+  int _selectedIndex = 0;
+  List<Widget> _widgetOptions = <Widget>[
+    CaseTracker(),
+    Text('Messgaes Screen'),
+    Text('Profile Screen'),
+  ];
+
+  void _onItemTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   @override
@@ -48,6 +60,71 @@ class _CaseTrackerState extends State<CaseTracker> {
                 SizedBox(
                   height: 5,
                 ),
+                // BottomNavigationBar(
+                //   items: const <BottomNavigationBarItem>[
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.home,
+                //       ),
+                //       title: Text(
+                //         'World Stats',
+                //       ),
+                //     ),
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.golf_course,
+                //       ),
+                //       title: Text(
+                //         'Country Stats',
+                //       ),
+                //     ),
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.apartment,
+                //       ),
+                //       title: Text(
+                //         'India Stats',
+                //       ),
+                //     ),
+                //   ],
+                //   currentIndex: _selectedIndex,
+                //   onTap: _onItemTap,
+                //   selectedFontSize: 13.0,
+                //   unselectedFontSize: 13.0,
+                // ),
+                //   bottomNavigationBar: BottomNavigationBar(
+                //   items: const <BottomNavigationBarItem>[
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.home,
+                //       ),
+                //       title: Text(
+                //         'Home',
+                //       ),
+                //     ),
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.message,
+                //       ),
+                //       title: Text(
+                //         'Messages',
+                //       ),
+                //     ),
+                //     BottomNavigationBarItem(
+                //       icon: Icon(
+                //         Icons.person,
+                //       ),
+                //       title: Text(
+                //         'Profile',
+                //       ),
+                //     ),
+                //   ],
+                //   currentIndex: _selectedIndex,
+                //   onTap: _onItemTap,
+                //   selectedFontSize: 13.0,
+                //   unselectedFontSize: 13.0,
+                // ),
+
                 Row(
                   children: [
                     Row(
@@ -320,7 +397,39 @@ class _CaseTrackerState extends State<CaseTracker> {
             ),
           ),
         ),
-      ),
+      ), 
+        bottomNavigationBar: BottomNavigationBar(
+                  items: const <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.home,
+                      ),
+                      title: Text(
+                        'World Stats',
+                      ),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.golf_course,
+                      ),
+                      title: Text(
+                        'Country Stats',
+                      ),
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.apartment,
+                      ),
+                      title: Text(
+                        'India Stats',
+                      ),
+                    ),
+                  ],
+                  currentIndex: _selectedIndex,
+                  onTap: _onItemTap,
+                  selectedFontSize: 13.0,
+                  unselectedFontSize: 13.0,
+                ),     
     );
   }
 
@@ -384,13 +493,17 @@ class _CaseTrackerState extends State<CaseTracker> {
                                       return Text(Snapshot.error.toString());
                                     } else
                                       return CircularProgressIndicator(
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.black),
                                       );
                                   }),
                             ],
                           ),
                         ),
-                        SizedBox(height: 15,),
+                        SizedBox(
+                          height: 15,
+                        ),
                         Container(
                           height: 85,
                           width: 150,
@@ -426,7 +539,9 @@ class _CaseTrackerState extends State<CaseTracker> {
                                       return Text(Snapshot.error.toString());
                                     } else
                                       return CircularProgressIndicator(
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.black),
                                       );
                                   }),
                             ],
@@ -471,16 +586,19 @@ class _CaseTrackerState extends State<CaseTracker> {
                                       );
                                     } else if (Snapshot.hasError) {
                                       return Text(Snapshot.error.toString());
-                                    } 
-                                    else
+                                    } else
                                       return CircularProgressIndicator(
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.black),
                                       );
                                   }),
                             ],
                           ),
                         ),
-                        SizedBox(height: 15,),
+                        SizedBox(
+                          height: 15,
+                        ),
                         Container(
                           height: 85,
                           width: 150,
@@ -516,7 +634,9 @@ class _CaseTrackerState extends State<CaseTracker> {
                                       return Text(Snapshot.error.toString());
                                     } else
                                       return CircularProgressIndicator(
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.black),
                                       );
                                   }),
                             ],
@@ -527,51 +647,58 @@ class _CaseTrackerState extends State<CaseTracker> {
                     )
                   ],
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 Container(
                   height: 85,
                   width: double.infinity,
                   color: Colors.grey[300],
                   padding: EdgeInsets.all(8),
                   child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Total affected Countries',
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Total affected Countries',
+                        style: TextStyle(
+                          // fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      FutureBuilder<Tcases>(
+                          future: getJsonData(),
+                          builder: (BuildContext context, Snapshot) {
+                            if (Snapshot.hasData) {
+                              final covid = Snapshot.data;
+                              return Text(
+                                '${covid?.affectedCountries}',
                                 style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 18,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
                                 ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.affectedCountries}',
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-                                      );
-                                  }),
-                            ],
-                          ),
+                              );
+                            } else if (Snapshot.hasError) {
+                              return Text(Snapshot.error.toString());
+                            } else
+                              return CircularProgressIndicator(
+                                valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.black),
+                              );
+                          }),
+                    ],
+                  ),
                 ),
               ],
             ),
+            
           ),
+          
         ],
+        
       );
+      
 }
