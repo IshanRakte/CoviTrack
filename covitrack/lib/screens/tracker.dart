@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:covitrack/models/tcases.dart';
+import 'package:covitrack/screens/indiacases.dart';
 import 'package:covitrack/world_countrywise.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -21,13 +22,20 @@ class _CaseTrackerState extends State<CaseTracker> {
       throw Exception('try to reload');
     }
   }
-
+  @override
+  void initState() {
+    super.initState();
+    this.getJsonData();
+  }
+  
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     CaseTracker(),
-    Text('Messgaes Screen'),
+    World(),
     Text('Profile Screen'),
   ];
+
+
 
   void _onItemTap(int index) {
     setState(() {
@@ -36,15 +44,11 @@ class _CaseTrackerState extends State<CaseTracker> {
   }
 
   @override
-  void initState() {
-    super.initState();
-    this.getJsonData();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Container(
+        
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.purple, Colors.blue],
@@ -52,6 +56,7 @@ class _CaseTrackerState extends State<CaseTracker> {
             end: Alignment.bottomRight,
           ),
         ),
+        // child: _widgetOptions.elementAt(_selectedIndex), =>>> Need to add this
         child: SafeArea(
           child: Center(
             child: Column(
@@ -61,71 +66,6 @@ class _CaseTrackerState extends State<CaseTracker> {
                 SizedBox(
                   height: 5,
                 ),
-                // BottomNavigationBar(
-                //   items: const <BottomNavigationBarItem>[
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.home,
-                //       ),
-                //       title: Text(
-                //         'World Stats',
-                //       ),
-                //     ),
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.golf_course,
-                //       ),
-                //       title: Text(
-                //         'Country Stats',
-                //       ),
-                //     ),
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.apartment,
-                //       ),
-                //       title: Text(
-                //         'India Stats',
-                //       ),
-                //     ),
-                //   ],
-                //   currentIndex: _selectedIndex,
-                //   onTap: _onItemTap,
-                //   selectedFontSize: 13.0,
-                //   unselectedFontSize: 13.0,
-                // ),
-                //   bottomNavigationBar: BottomNavigationBar(
-                //   items: const <BottomNavigationBarItem>[
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.home,
-                //       ),
-                //       title: Text(
-                //         'Home',
-                //       ),
-                //     ),
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.message,
-                //       ),
-                //       title: Text(
-                //         'Messages',
-                //       ),
-                //     ),
-                //     BottomNavigationBarItem(
-                //       icon: Icon(
-                //         Icons.person,
-                //       ),
-                //       title: Text(
-                //         'Profile',
-                //       ),
-                //     ),
-                //   ],
-                //   currentIndex: _selectedIndex,
-                //   onTap: _onItemTap,
-                //   selectedFontSize: 13.0,
-                //   unselectedFontSize: 13.0,
-                // ),
-
                 Row(
                   children: [
                     Row(
@@ -409,46 +349,65 @@ class _CaseTrackerState extends State<CaseTracker> {
                       ),
                     ),
                   ),
+                  
                 ),
                 // --> remove the TextButton from here (once added to bottom navigation)
+                 Center(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+              return India();
+            }));
+                    },
+                    child: Text(
+                      'India Stats',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  
+                ),
                 
-                //
+                
               ],
             ),
           ),
         ),
+
       ), 
+      
         bottomNavigationBar: BottomNavigationBar(
                   items: const <BottomNavigationBarItem>[
                     BottomNavigationBarItem(
+                      
                       icon: Icon(
                         Icons.home,
                       ),
-                      title: Text(
+                      label:
                         'World Stats',
-                      ),
                     ),
                     BottomNavigationBarItem(
                       icon: Icon(
                         Icons.golf_course,
                       ),
-                      title: Text(
-                        'Country Stats',
-                      ),
+                      label:
+                        'Country Stats',  
                     ),
                     BottomNavigationBarItem(
                       icon: Icon(
                         Icons.apartment,
                       ),
-                      title: Text(
+                      label:
                         'India Stats',
-                      ),
                     ),
                   ],
                   currentIndex: _selectedIndex,
                   onTap: _onItemTap,
                   selectedFontSize: 13.0,
                   unselectedFontSize: 13.0,
+                  
                 ),     
     );
   }

@@ -11,7 +11,6 @@ class World extends StatefulWidget {
 class _WorldState extends State<World> {
   Future onRefresh() async {
     await Container(
-      
         padding: EdgeInsets.all(10),
         child: FutureBuilder(
             future: datas,
@@ -35,7 +34,6 @@ class _WorldState extends State<World> {
                                 snapshot.data[index]['deaths'].toString()),
                             child: Card(
                               child: Container(
-                                
                                   color: Color(0xFF292929),
                                   child: Center(
                                     child: Column(
@@ -73,30 +71,41 @@ class _WorldState extends State<World> {
         builder: (BuildContext contect) {
           return AlertDialog(
             backgroundColor: Color(0xFF363685),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15)
-            ),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
                   Text(
                     "Total Cases: $ind",
-                    style: TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 50),
                   Text(
                     "Today's Deaths: $inter",
-                    style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
                   Text(
                     "Total Recoveries: $recover",
-                    style: TextStyle(fontSize: 20, color: Colors.greenAccent,fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.greenAccent,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
                   Text(
                     "Total Deaths: $death",
-                    style: TextStyle(fontSize: 20, color: Colors.redAccent,fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.redAccent,
+                        fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -128,60 +137,60 @@ class _WorldState extends State<World> {
         backgroundColor: Colors.black,
         body: RefreshIndicator(
           child: Container(
-            decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.purple, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-         ),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.blue],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
               padding: EdgeInsets.all(12),
               child: SafeArea(
                 child: Column(
                   children: [
-                     SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  children: [
+                    SizedBox(
+                      height: 5,
+                    ),
                     Row(
                       children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: Icon(
-                            Icons.arrow_back_ios_new,
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(
+                                Icons.arrow_back_ios_new,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Countrywise',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24,
                             color: Colors.white,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(
-                      width: 10,
+                    Divider(
+                      height: 30,
+                      thickness: 5,
+                      color: Colors.white,
+                      indent: 16,
+                      endIndent: 16,
                     ),
-                    Text(
-                      'Countrywise',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(
-                  height: 30,
-                  thickness: 5,
-                  color: Colors.white,
-                  indent: 16,
-                  endIndent: 16,
-                ),
-                
                     Expanded(
                       child: FutureBuilder(
                           future: datas,
-                          builder: (BuildContext context, AsyncSnapshot snapshot) {
+                          builder:
+                              (BuildContext context, AsyncSnapshot snapshot) {
                             if (snapshot.hasData) {
                               print(snapshot.data);
                               return GridView.builder(
@@ -194,44 +203,45 @@ class _WorldState extends State<World> {
                                   itemCount: 222,
                                   itemBuilder: (BuildContext context, index) =>
                                       Container(
-                      //                         decoration: BoxDecoration(
-                      //   gradient: LinearGradient(
-                      //     colors: [Colors.purple, Colors.blue],
-                      //     begin: Alignment.topLeft,
-                      //     end: Alignment.bottomRight,
-                      //   ),
-                      // ),
+                                          //                         decoration: BoxDecoration(
+                                          //   gradient: LinearGradient(
+                                          //     colors: [Colors.purple, Colors.blue],
+                                          //     begin: Alignment.topLeft,
+                                          //     end: Alignment.bottomRight,
+                                          //   ),
+                                          // ),
                                           height: 20.0,
                                           width: 50.0,
                                           child: GestureDetector(
                                               onTap: () => showcard(
                                                   snapshot.data[index]['cases']
                                                       .toString(),
-                                                  snapshot.data[index]['todayDeaths']
+                                                  snapshot.data[index]
+                                                          ['todayDeaths']
                                                       .toString(),
-                                                  snapshot.data[index]['recovered']
+                                                  snapshot.data[index]
+                                                          ['recovered']
                                                       .toString(),
                                                   snapshot.data[index]['deaths']
                                                       .toString()),
                                               child: Card(
                                                 elevation: 2,
-                        
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                                                clipBehavior: Clip.antiAlias,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
                                                 child: Container(
-                                                    color: Colors.white,//
+                                                    color: Colors.white, //
                                                     child: Center(
                                                       child: Column(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
                                                                   .center,
                                                           crossAxisAlignment:
-                                                              CrossAxisAlignment.center,
+                                                              CrossAxisAlignment
+                                                                  .center,
                                                           children: <Widget>[
-                                                            
-                                  
                                                             // Text(
                                                             //   'Total Cases:${snapshot.data[index]['cases'].toString()}',
                                                             //   style: TextStyle(
@@ -240,17 +250,23 @@ class _WorldState extends State<World> {
                                                             //       fontWeight:
                                                             //           FontWeight.bold),
                                                             // ),
-                                                           
-                                  
+
                                                             Padding(
-                                                              padding: const EdgeInsets.all(19),
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(19),
                                                               child: Text(
-                                                                snapshot.data[index]
+                                                                snapshot.data[
+                                                                        index]
                                                                     ['country'],
                                                                 style: TextStyle(
-                                                                    fontSize: 18,
-                                                                    color: Colors.black,
-                                                                    fontWeight: FontWeight.bold),
+                                                                    fontSize:
+                                                                        18,
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
                                                               ),
                                                             ),
                                                           ]),
