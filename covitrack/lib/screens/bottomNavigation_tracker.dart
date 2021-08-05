@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:covitrack/models/tcases.dart';
-import 'package:covitrack/tracker/indiacases.dart';
 import 'package:covitrack/tracker/indiacases3.dart';
 import 'package:covitrack/tracker/tracker.dart';
 import 'package:covitrack/tracker/tracker.dart';
