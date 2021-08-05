@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:covitrack/models/tcases.dart';
-import 'package:covitrack/screens/bottomNavigation_tracker.dart';
-import 'package:covitrack/screens/indiacases.dart';
-import 'package:covitrack/world_countrywise.dart';
+import 'package:covitrack/tracker/indiacases.dart';
+import 'package:covitrack/tracker/indiacases2.dart';
+import 'package:covitrack/tracker/indiacases3.dart';
+import 'package:covitrack/tracker/world_countrywise.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -102,9 +103,9 @@ class _CaseTrackerState extends State<CaseTracker> {
                   indent: 20,
                   endIndent: 20,
                 ),
-                SizedBox(
-                  height: 30,
-                ),
+                // SizedBox(
+                //   height: 30,
+                // ), TEMPORARY
                 Center(
                   child: Card(
                     child: Container(
@@ -383,6 +384,23 @@ class _CaseTrackerState extends State<CaseTracker> {
                     },
                     child: Text(
                       'India Stats',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  
+                ),
+                Center(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+              return IndiaCases3();
+            }));
+                    },
+                    child: Text(
+                      'India Stats3',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

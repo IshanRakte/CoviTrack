@@ -1,0 +1,288 @@
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:dio/dio.dart';
+
+class IndiaCases2 extends StatefulWidget {
+  @override
+  _IndiaCases2State createState() => _IndiaCases2State();
+}
+
+class _IndiaCases2State extends State<IndiaCases2> {
+
+ Future onRefresh() async {
+    await Container(
+        padding: EdgeInsets.all(10),
+        child: FutureBuilder(
+            future: datas,
+            builder: (BuildContext context, AsyncSnapshot snapshot) {
+              if (snapshot.hasData) {
+                print(snapshot.data);
+                return GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 1.0,
+                        crossAxisSpacing: 10.0,
+                        mainAxisSpacing: 10.0),
+                    itemBuilder: (BuildContext context, index) => Container(
+                        height: 50.0,
+                        width: 50.0,
+                        child: GestureDetector(
+                            onTap: () => showcard(
+                                snapshot.data[index]['newInfected'].toString(),
+                                snapshot.data[index]['newRecovered'].toString(),
+                                snapshot.data[index]['recovered'].toString(),
+                                snapshot.data[index]['totalInfected'].toString()),
+                            child: Card(
+                              child: Container(
+                                  color: Color(0xFF292929),
+                                  child: Center(
+                                    child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          // Image(
+                                          //   image:
+                                          //       AssetImage("images/wdeath.png"),
+                                          //   height: 85,
+                                          //   width: 85,
+                                          // ),
+                                          Padding(padding: EdgeInsets.all(10)),
+                                          Text(
+                                            snapshot.data[index]['regionData'],
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white),
+                                          ),
+                                        ]),
+                                  )),
+                            ))));
+              }
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }));
+  }
+
+  Future showcard(String ind, inter, recover, death) async {
+    await showDialog(
+        context: context,
+        builder: (BuildContext contect) {
+          return AlertDialog(
+            backgroundColor: Color(0xFF363685),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(
+                    "Today Cases: $ind",
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 50),
+                  Text(
+                    "Today Recovered: $inter",
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    "Total Recoveries: $recover",
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.greenAccent,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    "Total Cases: $death",
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.redAccent,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  final String url = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
+  Future<List> datas;
+
+  Future<List> getData() async {
+    var response = await Dio().get(url);
+    return response.data;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    datas = getData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        // appBar: AppBar(
+        //     title: Text('Countrywise Statistics'),
+        //     backgroundColor: Color(0xFF152238)),
+        backgroundColor: Colors.black,
+        body: RefreshIndicator(
+          child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.blue],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              padding: EdgeInsets.all(12),
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: Icon(
+                                Icons.arrow_back_ios_new,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Statewise',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      height: 30,
+                      thickness: 5,
+                      color: Colors.white,
+                      indent: 16,
+                      endIndent: 16,
+                    ),
+                    Expanded(
+                      child: FutureBuilder(
+                          future: datas,
+                          builder:
+                              (BuildContext context, AsyncSnapshot snapshot) {
+                            if (snapshot.hasData) {
+                              print(snapshot.data);
+                              return GridView.builder(
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                          crossAxisCount: 2,
+                                          childAspectRatio: 1.3,
+                                          crossAxisSpacing: 10.0,
+                                          mainAxisSpacing: 10.0),
+                                  itemCount: 222,
+                                  itemBuilder: (BuildContext context, index) =>
+                                      Container(
+                                          //                         decoration: BoxDecoration(
+                                          //   gradient: LinearGradient(
+                                          //     colors: [Colors.purple, Colors.blue],
+                                          //     begin: Alignment.topLeft,
+                                          //     end: Alignment.bottomRight,
+                                          //   ),
+                                          // ),
+                                          height: 20.0,
+                                          width: 50.0,
+                                          child: GestureDetector(
+                                              onTap: () => showcard(
+                                                  snapshot.data[index]['newInfected']
+                                                      .toString(),
+                                                  snapshot.data[index]
+                                                          ['newRecovered']
+                                                      .toString(),
+                                                  snapshot.data[index]
+                                                          ['recovered']
+                                                      .toString(),
+                                                  snapshot.data[index]['totalInfected']
+                                                      .toString()),
+                                              child: Card(
+                                                elevation: 2,
+                                                clipBehavior: Clip.antiAlias,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
+                                                child: Container(
+                                                    color: Colors.white, //
+                                                    child: Center(
+                                                      child: Column(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          children: <Widget>[
+                                                            // Text(
+                                                            //   'Total Cases:${snapshot.data[index]['cases'].toString()}',
+                                                            //   style: TextStyle(
+                                                            //       color:
+                                                            //           Colors.redAccent,
+                                                            //       fontWeight:
+                                                            //           FontWeight.bold),
+                                                            // ),
+
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(19),
+                                                              child: Text(
+                                                                snapshot.data[
+                                                                        index]
+                                                                    ['region'],
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                          ]),
+                                                    )),
+                                              ))));
+                            }
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }),
+                    ),
+                  ],
+                ),
+              )),
+          onRefresh: () => onRefresh(),
+        ));
+  }
+}
+

@@ -7,7 +7,7 @@ import 'package:covitrack/screens/emergency.dart';
 import 'package:covitrack/screens/precautions.dart';
 import 'package:covitrack/screens/symptoms.dart';
 import 'package:covitrack/screens/vaccine.dart';
-import 'package:covitrack/screens/tracker.dart';
+import 'package:covitrack/tracker/tracker.dart';
 
 void main() {
   runApp(MaterialApp(
