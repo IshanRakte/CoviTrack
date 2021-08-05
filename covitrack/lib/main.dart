@@ -1,3 +1,6 @@
+
+
+import 'package:covitrack/screens/bottomNavigation_tracker.dart';
 import 'package:flutter/material.dart';
 import 'package:covitrack/screens/vaccinetracker.dart';
 import 'package:covitrack/screens/emergency.dart';
@@ -16,6 +19,7 @@ void main() {
         '/symptoms': (context) => Symptoms(),
         '/precautions': (context) => Precautions(),
         '/emergency': (context) => Emergency(),
+        '/bottomnavtracker': (context) => bottomNavTracker(),
       },
 
       home: HomePage(),
@@ -74,7 +78,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: (){
-                          Navigator.pushNamed(context, '/casetracker');
+                          Navigator.pushNamed(context, '/bottomnavtracker');
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
