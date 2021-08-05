@@ -156,7 +156,10 @@ class _CaseTrackerState extends State<CaseTracker> {
                                     } else if (Snapshot.hasError) {
                                       return Text(Snapshot.error.toString());
                                     } else
-                                      return CircularProgressIndicator();
+                                      return CircularProgressIndicator(
+                                        valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.black),
+                                      );
                                   }),
                               SizedBox(
                                 width: 35,
@@ -225,7 +228,10 @@ class _CaseTrackerState extends State<CaseTracker> {
                                     } else if (Snapshot.hasError) {
                                       return Text(Snapshot.error.toString());
                                     } else
-                                      return CircularProgressIndicator();
+                                      return CircularProgressIndicator(
+                                        valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.black),
+                                      );
                                   }),
                               SizedBox(
                                 width: 35,
@@ -294,7 +300,10 @@ class _CaseTrackerState extends State<CaseTracker> {
                                     } else if (Snapshot.hasError) {
                                       return Text(Snapshot.error.toString());
                                     } else
-                                      return CircularProgressIndicator();
+                                      return CircularProgressIndicator(
+                                        valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.black),
+                                      );
                                   }),
                               SizedBox(
                                 width: 35,
