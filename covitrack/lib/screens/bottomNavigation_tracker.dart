@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:covitrack/models/tcases.dart';
-import 'package:covitrack/screens/indiacases.dart';
-import 'package:covitrack/screens/tracker.dart';
-import 'package:covitrack/world_countrywise.dart';
+import 'package:covitrack/tracker/indiacases.dart';
+import 'package:covitrack/tracker/tracker.dart';
+import 'package:covitrack/tracker/tracker.dart';
+import 'package:covitrack/tracker/world_countrywise.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
