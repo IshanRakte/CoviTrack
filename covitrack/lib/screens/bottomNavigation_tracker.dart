@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:covitrack/models/tcases.dart';
 import 'package:covitrack/tracker/indiacases.dart';
+import 'package:covitrack/tracker/indiacases3.dart';
 import 'package:covitrack/tracker/tracker.dart';
 import 'package:covitrack/tracker/tracker.dart';
 import 'package:covitrack/tracker/world_countrywise.dart';
@@ -20,7 +21,7 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
   List<Widget> _widgetOptions = <Widget>[
     CaseTracker(),
     World(),
-    Text('Profile Screen'),
+    IndiaCases3(),
   ];
 
   void _onItemTap(int index) {
@@ -45,8 +46,10 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
         ),
         // child: _widgetOptions.elementAt(_selectedIndex), =>>> Need to add this
         child: SafeArea(
-          child: Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
+          child: IndexedStack(
+            children: [Center(
+              child: _widgetOptions.elementAt(_selectedIndex),
+            ),]
           ),
         ),
 
