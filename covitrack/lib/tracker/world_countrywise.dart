@@ -274,7 +274,10 @@ class _WorldState extends State<World> {
                                               ))));
                             }
                             return Center(
-                              child: CircularProgressIndicator(),
+                              child: CircularProgressIndicator(
+                                valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.black),
+                              ),
                             );
                           }),
                     ),

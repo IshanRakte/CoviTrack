@@ -333,83 +333,7 @@ class _CaseTrackerState extends State<CaseTracker> {
                       ),
                     ),
                   ),
-                ),
-
-                // --> remove the TextButton from here (once added to bottom navigation)
-                Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-              return World();
-            }));
-                    },
-                    child: Text(
-                      'Countrywise stats',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  
-                ),
-                // --> remove the TextButton from here (once added to bottom navigation)
-                
-                // --> remove the TextButton from here (once added to bottom navigation)
-            //     Center(
-            //       child: TextButton(
-            //         onPressed: () {
-            //           Navigator.push(context, MaterialPageRoute(builder: (context){
-            //   return bottomNavTracker();
-            // }));
-            //         },
-            //         child: Text(
-            //           'bottom nav',
-            //           style: TextStyle(
-            //             color: Colors.white,
-            //             fontWeight: FontWeight.bold,
-            //           ),
-            //         ),
-            //       ),
-                  
-            //     ),
-                // --------------------------------
-                
-                 Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-              return India();
-            }));
-                    },
-                    child: Text(
-                      'India Stats',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  
-                ),
-                Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-              return IndiaCases3();
-            }));
-                    },
-                    child: Text(
-                      'India Stats3',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  
-                ),
-                
+                ), 
                 
               ],
             ),
@@ -417,38 +341,7 @@ class _CaseTrackerState extends State<CaseTracker> {
         ),
 
       ), 
-      
-        // bottomNavigationBar: BottomNavigationBar(
-        //           items: const <BottomNavigationBarItem>[
-        //             BottomNavigationBarItem(
-                      
-        //               icon: Icon(
-        //                 Icons.home,
-        //               ),
-        //               label:
-        //                 'World Stats',
-        //             ),
-        //             BottomNavigationBarItem(
-        //               icon: Icon(
-        //                 Icons.golf_course,
-        //               ),
-        //               label:
-        //                 'Country Stats',  
-        //             ),
-        //             BottomNavigationBarItem(
-        //               icon: Icon(
-        //                 Icons.apartment,
-        //               ),
-        //               label:
-        //                 'India Stats',
-        //             ),
-        //           ],
-        //           currentIndex: _selectedIndex,
-        //           onTap: _onItemTap,
-        //           selectedFontSize: 13.0,
-        //           unselectedFontSize: 13.0,
-                  
-        //         ),     
+         
     );
   }
 
