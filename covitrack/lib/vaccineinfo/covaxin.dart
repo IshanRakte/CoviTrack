@@ -113,14 +113,8 @@ class _VaccineInfoState extends State<VaccineInfo> {
                         child: Image.asset('assets/covaxin.jpg',width: 230,),
                       ),
                       SizedBox(height: 10,),
-                      Text(
-                        'COVAXIN',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+
+                      
                       Text(''),
                       Text(''),
                       Text(''),

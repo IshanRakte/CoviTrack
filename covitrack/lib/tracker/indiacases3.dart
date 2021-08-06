@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:dio/dio.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class IndiaCases3 extends StatefulWidget {
 
@@ -136,10 +137,16 @@ class _IndiaCases3State extends State<IndiaCases3> {
   Widget build(BuildContext context) {
     return Scaffold(
         
-        backgroundColor: Colors.transparent,
+        // backgroundColor: Colors.transparent,
         body: RefreshIndicator(
           child: Container(
-              
+               decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.purple, Colors.blue],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
               child: SafeArea(
                 child: Column(
                   children: [
@@ -154,10 +161,10 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                icon: Icon(
-                                  Icons.arrow_back_ios_new,
-                                  color: Colors.white,
-                                ),
+                                icon: FaIcon(FontAwesomeIcons.angleLeft)
+                                //   Icons.arrow_back_ios_new,
+                                //   color: Colors.white,
+                                // ),
                               ),
                             ],
                           ),

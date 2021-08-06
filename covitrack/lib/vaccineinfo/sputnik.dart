@@ -112,15 +112,7 @@ class _HomePageState extends State<HomePage> {
                         child: Image.asset('assets/sputnik.jpg',width: 230,),
                       ),
                       SizedBox(height: 10,),                      
-                      
-                      Text(
-                        'SPUTNIK-V',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+
                       Text(''),
                       Text(''),
                       Text(''),
