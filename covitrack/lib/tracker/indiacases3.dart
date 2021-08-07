@@ -80,7 +80,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
         context: context,
         builder: (BuildContext contect) {
           return AlertDialog(
-            backgroundColor: Color(0xFF363636),
+            backgroundColor: Color(0xff252A34),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             content: SingleChildScrollView(
@@ -140,13 +140,14 @@ class _IndiaCases3State extends State<IndiaCases3> {
         // backgroundColor: Colors.transparent,
         body: RefreshIndicator(
           child: Container(
-               decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.purple, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+            color: Color(0xff08D9D6),
+        //        decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [Colors.purple, Colors.blue],
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomRight,
+        //   ),
+        // ),
               child: SafeArea(
                 child: Column(
                   children: [
@@ -161,7 +162,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                icon: FaIcon(FontAwesomeIcons.angleLeft)
+                                icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
                                 //   Icons.arrow_back_ios_new,
                                 //   color: Colors.white,
                                 // ),
@@ -176,7 +177,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 28,
-                              color: Colors.white,
+                              color: Color(0xff252A34),
                             ),
                           ),
                         ],
@@ -184,7 +185,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                       Divider(
                         height: 30,
                         thickness: 5,
-                        color: Colors.white,
+                        color: Color(0xff252A34),
                         indent: 20,
                         endIndent: 20,
                       ),
@@ -192,9 +193,11 @@ class _IndiaCases3State extends State<IndiaCases3> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
+                          color: Color(0xffEAEAEA),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
+                              color: Color(0xffEAEAEA),
                               // height: 100,
                               width: double.infinity,
                               child: Column(
@@ -231,40 +234,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                         }
                                       ),
                                     ],
-                                  ),
-                                  SizedBox(height: 5,),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'New Active Cases: ',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          // fontWeight: FontWeight.bold,
-                                          // color: Colors.grey[600],
-                                        ),
-                                      ),
-                                      FutureBuilder(
-                                        future: indiadata,
-                                        builder: (BuildContext context, Snapshot){
-                                          if(Snapshot.hasData){
-                                            return Text('${Snapshot.data['activeCasesNew']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),);
-                                          }
-                                          
-                                          else{
-                                            return SizedBox(
-                                              height: 10,
-                                              width: 10,
-                                              child: CircularProgressIndicator(
-                                                strokeWidth: 2,
-                                                valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.black),
-                                              ),
-                                            );
-                                          }
-                                        }
-                                      ),
-                                    ],
-                                  ),
+                                  ),  
                                   SizedBox(height: 5,),
                                   Row(
                                     children: [
@@ -417,7 +387,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                                   // child: Padding(padding: EdgeInsets.symmetric(vertical: 10,horizontal: 8),
                     
                                                   child: Container(
-                                                      color: Colors.white,
+                                                      color: Color(0xffEAEAEA),
                                                       child: Center(
                                                         child: Padding(
                                                           padding: const EdgeInsets.all(8.0),

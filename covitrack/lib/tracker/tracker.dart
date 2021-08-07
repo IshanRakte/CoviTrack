@@ -3,6 +3,7 @@ import 'package:covitrack/models/tcases.dart';
 import 'package:covitrack/tracker/indiacases3.dart';
 import 'package:covitrack/tracker/world_countrywise.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 
 class CaseTracker extends StatefulWidget {
@@ -48,14 +49,14 @@ class _CaseTrackerState extends State<CaseTracker> {
     return Scaffold(
 
       body: Container(
-        
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.purple, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        color: Color(0xff08D9D6),
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [Colors.purple, Colors.blue],
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomRight,
+        //   ),
+        // ),
         // child: _widgetOptions.elementAt(_selectedIndex), =>>> Need to add this
         child: SafeArea(
           child: Center(
@@ -74,10 +75,11 @@ class _CaseTrackerState extends State<CaseTracker> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          icon: Icon(
-                            Icons.arrow_back_ios_new,
-                            color: Colors.white,
-                          ),
+                          icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
+                          // icon: Icon(
+                          //   Icons.arrow_back_ios_new,
+                          //   color: Colors.white,
+                          // ),
                         ),
                       ],
                     ),
@@ -89,7 +91,7 @@ class _CaseTrackerState extends State<CaseTracker> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 28,
-                        color: Colors.white,
+                        color: Color(0xff252A34),
                       ),
                     ),
                   ],
@@ -97,7 +99,7 @@ class _CaseTrackerState extends State<CaseTracker> {
                 Divider(
                   height: 30,
                   thickness: 5,
-                  color: Colors.white,
+                  color: Color(0xff252A34),
                   indent: 20,
                   endIndent: 20,
                 ),
@@ -106,6 +108,12 @@ class _CaseTrackerState extends State<CaseTracker> {
                 ), 
                 Center(
                   child: Card(
+                    elevation: 2,
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(10),
+                    ),
                     child: Container(
                       height: 130,
                       width: 300,
@@ -177,6 +185,12 @@ class _CaseTrackerState extends State<CaseTracker> {
                 // SizedBox(height: 8,),
                 Center(
                   child: Card(
+                    elevation: 2,
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(10),
+                    ),
                     child: Container(
                       height: 130,
                       width: 300,
@@ -249,6 +263,12 @@ class _CaseTrackerState extends State<CaseTracker> {
                 // SizedBox(height: 8,),
                 Center(
                   child: Card(
+                    elevation: 2,
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(10),
+                    ),
                     child: Container(
                       height: 130,
                       width: 300,
@@ -335,7 +355,7 @@ class _CaseTrackerState extends State<CaseTracker> {
                     child: Text(
                       'View Details',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xff252A34),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
