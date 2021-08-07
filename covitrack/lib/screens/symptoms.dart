@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Symptoms extends StatelessWidget {
   static String route = '/another';
@@ -7,49 +8,58 @@ class Symptoms extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
        body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.greenAccent.shade400, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          )
-        ),
+         color: Color(0xff08D9D6),
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [Colors.greenAccent.shade400, Colors.blue],
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomRight,
+        //   )
+        // ),
         child: Center(
           child: SafeArea(
             child: Column(
               children: [
                 
-                SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              IconButton(
-                                onPressed: (){
-                                  Navigator.pop(context);
-                                }, 
-                                icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
-                              ),
-                            ],
-                          ),
-                          SizedBox(width: 10,),
-                          Text(
-                            'Symptoms',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 28,
-                              color: Colors.white
-                            ),
-                          ),
-                        ],
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
+                          // icon: Icon(
+                          //   Icons.arrow_back_ios_new,
+                          //   color: Colors.white,
+                          // ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Symptoms',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 28,
+                        color: Color(0xff252A34),
                       ),
-                      Divider(
-                        height: 30,
-                        thickness: 5,
-                        indent: 20,
-                        endIndent: 20,
-                        color: Colors.white,
-                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                  height: 30,
+                  thickness: 5,
+                  color: Color(0xff252A34),
+                  indent: 20,
+                  endIndent: 20,
+                ),
                       SizedBox(height: 20,),
                 Expanded(
                   child: SingleChildScrollView(
@@ -182,6 +192,9 @@ class Symptoms extends StatelessWidget {
 
 Widget buildText(BuildContext context) => ExpansionTile(
   childrenPadding: EdgeInsets.all(16),
+  // collapsedIconColor: Color(0xff08D9D6),
+  iconColor: Color(0xff08D9D6),
+  textColor: Color(0xff08D9D6),
   title: Text(
     'Expand', 
     style: TextStyle(
@@ -204,6 +217,9 @@ Widget buildText(BuildContext context) => ExpansionTile(
 
 Widget buildText1(BuildContext context) => ExpansionTile(
   childrenPadding: EdgeInsets.all(16),
+  // collapsedIconColor: Color(0xff08D9D6),
+  iconColor: Color(0xff08D9D6),
+  textColor: Color(0xff08D9D6),
   title: Text(
     'Expand', 
     style: TextStyle(
@@ -227,6 +243,9 @@ Widget buildText1(BuildContext context) => ExpansionTile(
 
 Widget buildText2(BuildContext context) => ExpansionTile(
   childrenPadding: EdgeInsets.all(16),
+  // collapsedIconColor: Color(0xff08D9D6),
+  iconColor: Color(0xff08D9D6),
+  textColor: Color(0xff08D9D6),
   title: Text(
     'Expand', 
     style: TextStyle(

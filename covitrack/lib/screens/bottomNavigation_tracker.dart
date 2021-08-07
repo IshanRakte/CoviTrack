@@ -30,13 +30,14 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.purple, Colors.blue],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        color: Color(0xff08D9D6),
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [Colors.purple, Colors.blue],
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomRight,
+        //   ),
+        // ),
         // child: _widgetOptions.elementAt(_selectedIndex), =>>> Need to add this
         child: SafeArea(
           child: Center(
@@ -45,13 +46,15 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blueGrey[50],
-        elevation: 8.0,
+        backgroundColor: Color(0xff252A34),
+        elevation: 0,
+        selectedItemColor: Color(0xff08D9D6),
+        unselectedItemColor: Color(0xffEAEAEA),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.globeAfrica,
-              size: 23,
+              size: 20,
               // color: Colors.white,
             ),
             label: 'World Stats',
@@ -59,7 +62,7 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.flagCheckered,
-              size: 23,
+              size: 20,
               // color: Colors.white,
               
             ),
@@ -68,7 +71,7 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.flag,
-              size: 23,
+              size: 20,
               // color: Colors.white,
             ),
             label: 'India Stats',

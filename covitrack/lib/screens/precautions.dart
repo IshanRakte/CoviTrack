@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Precautions extends StatelessWidget {
   static String route = '/precaution';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [Colors.greenAccent.shade400, Colors.blue],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        )),
+        color: Color(0xff08D9D6),
+        // decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //   colors: [Colors.greenAccent.shade400, Colors.blue],
+        //   begin: Alignment.topLeft,
+        //   end: Alignment.bottomRight,
+        // )),
         child: Center(
           child: SafeArea(
             child: Column(
@@ -24,10 +26,11 @@ class Precautions extends StatelessWidget {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          icon: Icon(
-                            Icons.arrow_back_ios_new,
-                            color: Colors.white,
-                          ),
+                          icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
+                          // icon: Icon(
+                          //   Icons.arrow_back_ios_new,
+                          //   color: Colors.white,
+                          // ),
                         ),
                       ],
                     ),
@@ -39,7 +42,7 @@ class Precautions extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 28,
-                          color: Colors.white),
+                          color: Color(0xff252A34)),
                     ),
                   ],
                 ),
@@ -48,7 +51,7 @@ class Precautions extends StatelessWidget {
                   thickness: 5,
                   indent: 20,
                   endIndent: 20,
-                  color: Colors.white,
+                  color: Color(0xff252A34),
                 ),
                 SizedBox(height: 20,),
 
@@ -76,8 +79,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Maintain a safe distance from anyone who is coughing or sneezing.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )
@@ -104,8 +108,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )
@@ -132,8 +137,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Stay home if you feel unwell.\nIf you have a fever, cough and difficulty breathing, seek medical attention.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )
@@ -160,8 +166,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Clean your hands often.\nUse soap and water, or an alcohol-based hand rub.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )
@@ -188,8 +195,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Wear a mask when physical distancing is not possible.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )
@@ -216,8 +224,9 @@ class Precautions extends StatelessWidget {
                                   child: Text(
                                     'Don’t touch your eyes, nose or mouth.',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: Color(0xff252A34),
                                     ),
                                   ),
                                 )

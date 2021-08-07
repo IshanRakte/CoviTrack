@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:covitrack/vaccineinfo/covaxin.dart';
 import 'package:covitrack/vaccineinfo/covishield.dart';
 import 'package:covitrack/vaccineinfo/sputnik.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class VaccineInfo extends StatefulWidget {
   @override
   _VaccineInfoState createState() => _VaccineInfoState();
@@ -39,7 +40,8 @@ class _VaccineInfoState extends State<VaccineInfo> {
                                   onPressed: (){
                                     Navigator.pop(context);
                                   }, 
-                                  icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
+                                  // icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
+                                  icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
                                 ),
                               ],
                             ),
@@ -49,7 +51,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 28,
-                                color: Colors.white
+                                color: Color(0xff252A34)
                               ),
                             ),
                           ],
@@ -59,14 +61,15 @@ class _VaccineInfoState extends State<VaccineInfo> {
                           thickness: 5,
                           indent: 20,
                           endIndent: 20,
-                          color: Colors.white,
+                          color: Color(0xff252A34),
                         ),
                         SizedBox(height: 20,),
               Text("Information about COVISHIELD, COVAXIN and SPUTNIK-V",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 28,
-                fontWeight: FontWeight.w500
+                fontWeight: FontWeight.w500,
+                color: Color(0xff252A34)
               ),),
               SizedBox(height: 40,),
               ElevatedButton(

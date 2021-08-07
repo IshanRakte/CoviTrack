@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:dio/dio.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class World extends StatefulWidget {
   @override
@@ -72,7 +73,7 @@ class _WorldState extends State<World> {
         context: context,
         builder: (BuildContext contect) {
           return AlertDialog(
-            backgroundColor: Color(0xFF363685),
+            backgroundColor: Color(0xff252A34),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             content: SingleChildScrollView(
@@ -147,13 +148,14 @@ class _WorldState extends State<World> {
         
         body: RefreshIndicator(
           child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.purple, Colors.blue],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
+            color: Color(0xff08D9D6),
+              // decoration: BoxDecoration(
+              //   gradient: LinearGradient(
+              //     colors: [Colors.purple, Colors.blue],
+              //     begin: Alignment.topLeft,
+              //     end: Alignment.bottomRight,
+              //   ),
+              // ),
               // padding: EdgeInsets.all(12),
               child: SafeArea(
                 child: Column(
@@ -169,10 +171,11 @@ class _WorldState extends State<World> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              icon: Icon(
-                                Icons.arrow_back_ios_new,
-                                color: Colors.white,
-                              ),
+                              icon: FaIcon(FontAwesomeIcons.angleLeft,color: Color(0xff252A34),)
+                              // icon: Icon(
+                              //   Icons.arrow_back_ios_new,
+                              //   color: Colors.white,
+                              // ),
                             ),
                           ],
                         ),
@@ -184,7 +187,7 @@ class _WorldState extends State<World> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 28,
-                            color: Colors.white,
+                            color: Color(0xff252A34),
                           ),
                         ),
                       ],
@@ -192,7 +195,7 @@ class _WorldState extends State<World> {
                     Divider(
                       height: 30,
                       thickness: 5,
-                      color: Colors.white,
+                      color: Color(0xff252A34),
                       indent: 20,
                       endIndent: 20,
                     ),
@@ -246,7 +249,7 @@ class _WorldState extends State<World> {
                                                         BorderRadius.circular(10),
                                                   ),
                                                   child: Container(
-                                                      color: Colors.white, //
+                                                      color: Color(0xffEAEAEA), //
                                                       child: Center(
                                                         child: Column(
                                                             mainAxisAlignment:
