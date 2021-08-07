@@ -49,7 +49,7 @@ class _OxyState extends State<Oxy> {
                       width: 10,
                     ),
                     Text(
-                      'Oxygen level',
+                      'Oxygen Level',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 28,
@@ -208,7 +208,7 @@ class _PulseState extends State<Pulse> {
                       width: 10,
                     ),
                     Text(
-                      'Pulse Calculator',
+                      'Pulse Level',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 28,

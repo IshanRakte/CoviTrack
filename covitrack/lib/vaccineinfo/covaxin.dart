@@ -134,13 +134,13 @@ class _VaccineInfoState extends State<VaccineInfo> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
-                      Text('Rs 400 in government hospita',
+                      Text('Rs 400 in government hospitals',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
                       Text(
-                        'Rs 1200 in private hospitals',
+                        'Rs 1200-1500 in Private hospitals',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,

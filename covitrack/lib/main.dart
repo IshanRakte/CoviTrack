@@ -11,6 +11,7 @@ import 'package:covitrack/screens/precautions.dart';
 import 'package:covitrack/screens/symptoms.dart';
 import 'package:covitrack/screens/vaccine.dart';
 import 'package:covitrack/tracker/tracker.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -43,6 +44,8 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 28,),
               Row(
                 children: [
+                  SizedBox(width: 17.0,),
+                  FaIcon(FontAwesomeIcons.home, size: 30,),
                   SizedBox(width: 20,),
                   Text(
                     'Home',

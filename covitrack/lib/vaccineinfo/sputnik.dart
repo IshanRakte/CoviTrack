@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      Text('Rs 995',
+                      Text('Rs 995-1200',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,

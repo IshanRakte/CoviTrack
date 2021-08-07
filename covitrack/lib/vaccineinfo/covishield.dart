@@ -138,12 +138,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      Text('Rs 300 in government hospital',
+                      Text('Currently FREE in Government hospitals',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
-                      Text('Rs 600 in private hospital',
+                      Text('Rs 500-800 in Private hospitals',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,

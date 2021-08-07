@@ -239,7 +239,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                               child: CircularProgressIndicator(
                                                 strokeWidth: 2,
                                                 valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.black),
+                                                  AlwaysStoppedAnimation<Color>(Colors.white),
                                               ),
                                             );
                                           }
@@ -272,7 +272,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                               child: CircularProgressIndicator(
                                                 strokeWidth: 2,
                                                 valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.black),
+                                                  AlwaysStoppedAnimation<Color>(Colors.white),
                                               ),
                                             );
                                           }
@@ -305,7 +305,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                               child: CircularProgressIndicator(
                                                 strokeWidth: 2,
                                                 valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.black),
+                                                  AlwaysStoppedAnimation<Color>(Colors.white),
                                               ),
                                             );
                                           }
@@ -338,7 +338,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                               child: CircularProgressIndicator(
                                                 strokeWidth: 2,
                                                 valueColor:
-                                                  AlwaysStoppedAnimation<Color>(Colors.black),
+                                                  AlwaysStoppedAnimation<Color>(Colors.white),
                                               ),
                                             );
                                           }
@@ -455,8 +455,10 @@ class _IndiaCases3State extends State<IndiaCases3> {
                       ),
                     ),
                   ],
+                  
                 ),
-              )),
+              )
+              ),
           onRefresh: () => onRefresh(),
         ));
   }
