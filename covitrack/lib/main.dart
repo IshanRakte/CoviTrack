@@ -1,3 +1,4 @@
+// import 'dart:js';
 import 'package:covitrack/screens/bottomNavigation_tracker.dart';
 import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ void main() {
         '/precautions': (context) => Precautions(),
         '/emergency': (context) => Emergency(),
         '/bottomnavtracker': (context) => bottomNavTracker(),
+        '/home': (context) => HomePage()
       },
 
       home: SplashScreen(),
