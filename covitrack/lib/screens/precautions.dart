@@ -208,7 +208,7 @@ class Precautions extends StatelessWidget {
                                 SizedBox(height: 15,),
                                 Container(
                                   // padding: EdgeInsets.all(5),
-                                  child: Image.asset('assets/mask.jpeg',width: 140,),
+                                  child: Image.asset('assets/face.png',width: 140, height: 135,),
                                 ),
                                 Container(
                                   padding: EdgeInsets.all(16),
