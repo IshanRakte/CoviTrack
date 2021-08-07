@@ -97,7 +97,7 @@ class _CaseTrackerState extends State<CaseTracker> {
                   ],
                 ),
                 Divider(
-                  height: 30,
+                  height: 15,
                   thickness: 5,
                   color: Color(0xff252A34),
                   indent: 20,

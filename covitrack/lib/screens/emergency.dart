@@ -1,53 +1,60 @@
 import 'package:covitrack/cities/cities2.dart';
 import 'package:flutter/material.dart';
 import 'package:covitrack/cities/cities1.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Emergency extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-          colors: [Color(0xffe65758), Color(0xff771d38)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        )
-        ),
+        color: Color(0xffe65758),
         child: Center(
           child: SafeArea(
             child: Column(
-              children: [SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              IconButton(
-                                onPressed: (){
-                                  Navigator.pop(context);
-                                }, 
-                                icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
-                              ),
-                            ],
+              children: [
+                SizedBox(height: 5,),
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: FaIcon(FontAwesomeIcons.angleLeft,
+                          // color: Color(0xff252A34),
+                          color: Colors.white,
+                          )
+                          // icon: Icon(
+                          //   Icons.arrow_back_ios_new,
+                          //   color: Colors.white,
+                          // ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Emergency',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 28,
+                          // color: Color(0xff252A34)
+                          color: Colors.white
                           ),
-                          SizedBox(width: 10,),
-                          Text(
-                            'Emergency',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 28,
-                              color: Colors.white
-                            ),
-                          ),
-                        ],
-                      ),
-                      Divider(
-                        height: 30,
-                        thickness: 5,
-                        indent: 20,
-                        endIndent: 20,
-                        color: Colors.white,
-                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                  height: 15,
+                  thickness: 5,
+                  indent: 20,
+                  endIndent: 20,
+                  // color: Color(0xff252A34),
+                  color: Colors.white
+                ),
                       SizedBox(height: 20,),
                 
                 Expanded(
@@ -55,391 +62,606 @@ class Emergency extends StatelessWidget {
                     physics: BouncingScrollPhysics(),
                     child: Column(
                       children: [
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Ink(
-                                  child: Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
+                        //---------
+
+                        Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) => Pune()));
-                                      },
-                                      child: Text(
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
                                         'Pune  >',
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
+                                          fontSize: 12,
                                         ),
                                       ),
-                                    ),
+                                     
+                                    ],
                                   ),
-                                ),
-                              ],
+                                 
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(height: 20.0),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Mumbai()));
-                                    },
-                                    child: Text(
-                                      'Mumbai  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Mumbai  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                      
+                                    ],
                                   ),
-                                )
-                              ],
+                                  
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Bangalore()));
-                                    },
-                                    child: Text(
-                                      'Bangalore  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5,),
+
+
+
+              //--------------------------------------------------------------------------------------
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Bangalore()));
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Bangalore  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                     
+                                    ],
                                   ),
-                                )
-                              ],
+                                 
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Kolkata()));
-                                    },
-                                    child: Text(
-                                      'Kolkata  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Kolkata  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                      
+                                    ],
                                   ),
-                                )
-                              ],
+                                  
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Delhi()));
-                                    },
-                                    child: Text(
-                                      'Delhi  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5,),
+              //-------------------------
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Delhi()));
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Delhi  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                     
+                                    ],
                                   ),
-                                )
-                              ],
+                                 
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        
-                        SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Chennai()));
-                                    },
-                                    child: Text(
-                                      'Chennai  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Chennai  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                      
+                                    ],
                                   ),
-                                )
-                              ],
+                                  
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                               SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Hyderabad()));
-                                    },
-                                    child: Text(
-                                      'Hyderabad  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5,),
+              //------------------------------------------
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Hyderabad()));
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Hyderabad  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                     
+                                    ],
                                   ),
-                                )
-                              ],
+                                 
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        
-                               SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Amritsar()));
-                                    },
-                                    child: Text(
-                                      'Amritsar  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Amritsar  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                      
+                                    ],
                                   ),
-                                )
-                              ],
+                                  
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        
-                             
-                               SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Ahmedabad()));
-                                    },
-                                    child: Text(
-                                      'Ahmedabad  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5,),
+              //------------------------------
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Ahmedabad()));
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Ahmedabad  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                     
+                                    ],
                                   ),
-                                )
-                              ],
+                                 
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                                  SizedBox(height: 20),
-                        Card(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                              width: 2,
-                              color: Colors.black,
-                            ),
-                          ),
-                          child: Container(
-                            width: 370,
-                            padding: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 40,
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Goa()));
-                                    },
-                                    child: Text(
-                                      'Goa  >',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                        },
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Goa  >',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
                                       ),
-                                    ),
+                                      
+                                    ],
                                   ),
-                                )
-                              ],
+                                  
+                                ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 5,),
+
+
+
+
+
+                        //
+                        
+                        //---------
+                        
+                             
+                        //        SizedBox(height: 20),
+                        // Card(
+                        //   color: Colors.white,
+                        //   shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     side: BorderSide(
+                        //       width: 2,
+                        //       color: Colors.black,
+                        //     ),
+                        //   ),
+                        //   child: Container(
+                        //     width: 370,
+                        //     padding: EdgeInsets.all(10),
+                        //     child: Column(
+                        //       crossAxisAlignment: CrossAxisAlignment.center,
+                        //       children: [
+                        //         Container(
+                        //           height: 40,
+                        //           child: TextButton(
+                        //             onPressed: () {
+                        //               Navigator.push(
+                        //                   context,
+                        //                   MaterialPageRoute(
+                        //                       builder: (context) => Ahmedabad()));
+                        //             },
+                        //             child: Text(
+                        //               'Ahmedabad  >',
+                        //               style: TextStyle(
+                        //                 color: Colors.black,
+                        //                 fontWeight: FontWeight.bold,
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         )
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
+                        //           SizedBox(height: 20),
+                        // Card(
+                        //   color: Colors.white,
+                        //   shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     side: BorderSide(
+                        //       width: 2,
+                        //       color: Colors.black,
+                        //     ),
+                        //   ),
+                        //   child: Container(
+                        //     width: 370,
+                        //     padding: EdgeInsets.all(10),
+                        //     child: Column(
+                        //       crossAxisAlignment: CrossAxisAlignment.center,
+                        //       children: [
+                        //         Container(
+                        //           height: 40,
+                        //           child: TextButton(
+                        //             onPressed: () {
+                        //               Navigator.push(
+                        //                   context,
+                        //                   MaterialPageRoute(
+                        //                       builder: (context) => Goa()));
+                        //             },
+                        //             child: Text(
+                        //               'Goa  >',
+                        //               style: TextStyle(
+                        //                 color: Colors.black,
+                        //                 fontWeight: FontWeight.bold,
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         )
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
                         
                         
                         

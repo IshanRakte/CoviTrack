@@ -47,7 +47,7 @@ class Precautions extends StatelessWidget {
                   ],
                 ),
                 Divider(
-                  height: 30,
+                  height: 15,
                   thickness: 5,
                   indent: 20,
                   endIndent: 20,
