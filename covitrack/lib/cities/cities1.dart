@@ -123,6 +123,21 @@ class _BangaloreState extends State<Bangalore> {
                                     "Address: Fort Rd, near City Market, New Tharagupet, Bengaluru, Karnataka 560002",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                   Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:080 2670 1150');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -138,21 +153,7 @@ class _BangaloreState extends State<Bangalore> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:080 2670 1150');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                 
                                 ],
                               ),
                             ),
@@ -194,6 +195,21 @@ class _BangaloreState extends State<Bangalore> {
                                     "Address: No. 1, Old No. 28, Platform Road Near Mantri Square Mall, Seshadripuram, Bengaluru, Karnataka 560020",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                   Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:080 4668 8888');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -209,21 +225,7 @@ class _BangaloreState extends State<Bangalore> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:080 4668 8888');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                 
                                 ],
                               ),
                             ),
@@ -265,6 +267,21 @@ class _BangaloreState extends State<Bangalore> {
                                     "Address: #43/2, New Airport Road, NH-7, Outer Ring Rd, Sahakar Nagar, Bengaluru, Karnataka 560092",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                               Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:080 4342 0100');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -280,21 +297,7 @@ class _BangaloreState extends State<Bangalore> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:080 4342 0100');
-                                        });
-                                      },
-                                    ),
-                                  ),
+     
                                 ],
                               ),
                             ),
@@ -435,21 +438,6 @@ class _DelhiState extends State<Delhi> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//aiims+delhi/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390ce26f903969d7:0x8367180c6de2ecc2?sa=X&ved=2ahUKEwi6iPbmpajxAhVMOisKHXuRDP8Q9RcwAHoECAYQBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -464,6 +452,22 @@ class _DelhiState extends State<Delhi> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//aiims+delhi/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390ce26f903969d7:0x8367180c6de2ecc2?sa=X&ved=2ahUKEwi6iPbmpajxAhVMOisKHXuRDP8Q9RcwAHoECAYQBQ');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -506,21 +510,6 @@ class _DelhiState extends State<Delhi> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//sir+ganga+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d02a17c4ab835:0xecd838535c0fa0f6?sa=X&ved=2ahUKEwiP3--ipqjxAhXqzDgGHba4CqMQ9RcwDnoECEQQBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -535,6 +524,22 @@ class _DelhiState extends State<Delhi> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//sir+ganga+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d02a17c4ab835:0xecd838535c0fa0f6?sa=X&ved=2ahUKEwiP3--ipqjxAhXqzDgGHba4CqMQ9RcwDnoECEQQBQ');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -576,6 +581,23 @@ class _DelhiState extends State<Delhi> {
                                     "Address: 14, Ring Rd, Near Amar Kaloni Market, Nirmal Puri, Block B, Lajpat Nagar IV, Lajpat Nagar 4, New Delhi, Delhi 110024",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                   Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white,
+                                            
+                                              )),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:+91 (011) 4242 4343');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -591,21 +613,7 @@ class _DelhiState extends State<Delhi> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:+91 (011) 4242 4343');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                 
                                 ],
                               ),
                             ),
@@ -747,6 +755,21 @@ class _KolkataState extends State<Kolkata> {
                                     "Address: 241, Deshpran Sasmal Road, Netajinagar, Rajendra Prasad Colony, Tollygunge, Kolkata, 700033",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                            Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:088207 02070');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -762,21 +785,7 @@ class _KolkataState extends State<Kolkata> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:088207 02070');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                        
                                 ],
                               ),
                             ),
@@ -819,21 +828,6 @@ class _KolkataState extends State<Kolkata> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//columbia+asia+kolkata/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a0275c1513d0b19:0xeaf5597a0cee8cb?sa=X&ved=2ahUKEwjimofegrfxAhX2lEsFHVe2AM0Q9RcwHnoECEwQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -848,6 +842,22 @@ class _KolkataState extends State<Kolkata> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//columbia+asia+kolkata/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a0275c1513d0b19:0xeaf5597a0cee8cb?sa=X&ved=2ahUKEwjimofegrfxAhX2lEsFHVe2AM0Q9RcwHnoECEwQBA');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -890,21 +900,6 @@ class _KolkataState extends State<Kolkata> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//peerless+hospital+kolkata/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a0271652e763a03:0x93ab7f119f9d152b?sa=X&ved=2ahUKEwjc3K-lg7fxAhUGWX0KHVRNBfYQ9RcwHXoECEkQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -919,6 +914,22 @@ class _KolkataState extends State<Kolkata> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//peerless+hospital+kolkata/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a0271652e763a03:0x93ab7f119f9d152b?sa=X&ved=2ahUKEwjc3K-lg7fxAhUGWX0KHVRNBfYQ9RcwHXoECEkQBA');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -1059,6 +1070,21 @@ class _MumbaiState extends State<Mumbai> {
                                     "Address: Acharya Donde Marg, Parel East, Parel, Mumbai, Maharashtra 400012",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                         Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:022 2410 7000');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -1074,21 +1100,7 @@ class _MumbaiState extends State<Mumbai> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:022 2410 7000');
-                                        });
-                                      },
-                                    ),
-                                  ),
+           
                                 ],
                               ),
                             ),
@@ -1131,20 +1143,6 @@ class _MumbaiState extends State<Mumbai> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text('Open In Google Maps',
-                                          style:
-                                              TextStyle(color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//saifee+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7ce1a9b19f6e5:0xc8b9c2b8a00a89ae?sa=X&ved=2ahUKEwjZ-rGDgbfxAhXn8HMBHfzNAncQ9RcwHHoECEwQBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -1159,6 +1157,21 @@ class _MumbaiState extends State<Mumbai> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',
+                                          style:
+                                              TextStyle(color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//saifee+hospital/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7ce1a9b19f6e5:0xc8b9c2b8a00a89ae?sa=X&ved=2ahUKEwjZ-rGDgbfxAhXn8HMBHfzNAncQ9RcwHHoECEwQBQ');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -1201,21 +1214,6 @@ class _MumbaiState extends State<Mumbai> {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                   Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//lilavati+hospital+mumbai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7c938c9dfd491:0x88790013d219e1cc?sa=X&ved=2ahUKEwjdvN6agbfxAhVT4XMBHSUDBcsQ9RcwKHoECF0QBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -1230,6 +1228,22 @@ class _MumbaiState extends State<Mumbai> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//lilavati+hospital+mumbai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7c938c9dfd491:0x88790013d219e1cc?sa=X&ved=2ahUKEwjdvN6agbfxAhVT4XMBHSUDBcsQ9RcwKHoECF0QBA');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  
                                 ],
                               ),
                             ),
@@ -1372,6 +1386,21 @@ class _PuneState extends State<Pune> {
                                     "Address: 27, Sadashiv Peth, Neighbor of Alka Talkies, Pune, Maharashtra 411030",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                   Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:(020) 24331706');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -1387,21 +1416,7 @@ class _PuneState extends State<Pune> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:(020) 24331706');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                 
                                 ],
                               ),
                             ),
@@ -1443,6 +1458,21 @@ class _PuneState extends State<Pune> {
                                     "Address: 32, Sasoon Road Opposite Railway Station, Central Excise Colony, Sangamvadi, Pune, Maharashtra 411001",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                    Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:+912066819999');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -1458,21 +1488,7 @@ class _PuneState extends State<Pune> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:+912066819999');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                
                                 ],
                               ),
                             ),
@@ -1514,6 +1530,22 @@ class _PuneState extends State<Pune> {
                                     "Address: 489, Rasta Peth, Sardar Moodliar Road, Pune, 411011.",
                                     style: TextStyle(fontSize: 18),
                                   ),
+
+                                     Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:+91 20 2621 7300');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -1529,21 +1561,7 @@ class _PuneState extends State<Pune> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:+91 20 2621 7300');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                               
                                 ],
                               ),
                             ),
