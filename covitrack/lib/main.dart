@@ -1,6 +1,5 @@
-
-
 import 'package:covitrack/screens/bottomNavigation_tracker.dart';
+import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:covitrack/screens/vaccinetracker.dart';
 import 'package:covitrack/screens/emergency.dart';
@@ -14,7 +13,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
         '/casetracker': (context) => CaseTracker(),
-        '/vaccine_tracker': (context) => VaccineTracker(),
+        '/vaccine_tracker': (context) => VaccineTracker2(),
         '/vaccine_info': (context) => VaccineInfo(),
         '/symptoms': (context) => Symptoms(),
         '/precautions': (context) => Precautions(),
@@ -22,7 +21,7 @@ void main() {
         '/bottomnavtracker': (context) => bottomNavTracker(),
       },
 
-      home: HomePage(),
+      home: SplashScreen(),
   ));
 }
 
