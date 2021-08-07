@@ -1,6 +1,6 @@
 // import 'dart:js';
-import 'package:covitrack/screens/bottomNavigation_oxypulse.dart';
-import 'package:covitrack/screens/bottomNavigation_tracker.dart';
+import 'package:covitrack/bnb/bottomNavigation_oxypulse.dart';
+import 'package:covitrack/bnb/bottomNavigation_tracker.dart';
 import 'package:covitrack/screens/oxypulse.dart';
 import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
