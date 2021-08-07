@@ -31,6 +31,8 @@ class _IndiaCases3State extends State<IndiaCases3> {
                         width: 50.0,
                         child: GestureDetector(
                             onTap: () => showcard(
+                              snapshot.data[index]['region']
+                                    .toString(),
                                 snapshot.data[index]['newInfected']
                                     .toString(),
                                 snapshot.data[index]['newRecovered']
@@ -59,6 +61,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                           Padding(padding: EdgeInsets.all(10)),
                                           Text(
                                             snapshot.data[index]['region'],
+                                            
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 color: Colors.white),
@@ -75,7 +78,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
 
    
 
-  Future showcard(String ind, inter, recover, death) async {
+  Future showcard(String ind, ind1, inter, recover, death) async {
     await showDialog(
         context: context,
         builder: (BuildContext contect) {
@@ -86,22 +89,28 @@ class _IndiaCases3State extends State<IndiaCases3> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
-                  Text(
-                    "New Cases: $ind",
-                    style: TextStyle(fontSize: 25, color: Colors.blue),
+                   Text(
+                    "$ind",
+                    style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 18,),
+                    Text(
+                    "New Cases: $ind1",
+                    style: TextStyle(fontSize: 20, color: Colors.redAccent, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Recovered: $inter",
-                    style: TextStyle(fontSize: 25, color: Colors.white),
+                    "New Recovered: $inter",
+                    style: TextStyle(fontSize: 20, color: Colors.greenAccent, fontWeight: FontWeight.bold),
+                  ),
+                                    Text(
+                    "Total Cases: $death",
+                    style: TextStyle(fontSize: 20, color: Colors.red[700], fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "Total Recoveries: $recover",
-                    style: TextStyle(fontSize: 25, color: Colors.green),
+                    style: TextStyle(fontSize: 20, color: Colors.green[700], fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    "Total cases: $death",
-                    style: TextStyle(fontSize: 25, color: Colors.red),
-                  ),
+
                 ],
               ),
             ),
@@ -193,11 +202,11 @@ class _IndiaCases3State extends State<IndiaCases3> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                          color: Color(0xffEAEAEA),
+                          color: Color(0xff252A34),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              color: Color(0xffEAEAEA),
+                              color: Color(0xff252A34),
                               // height: 100,
                               width: double.infinity,
                               child: Column(
@@ -205,19 +214,22 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                   SizedBox(height: 10,),
                                   Row(
                                     children: [
+                                      
+
+
                                       Text(
                                         'Total Active Cases: ',
                                         style: TextStyle(
                                           fontSize: 18,
-                                          // fontWeight: FontWeight.bold,
-                                          // color: Colors.grey[600],
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
                                         ),
                                       ),
                                       FutureBuilder(
                                         future: indiadata,
                                         builder: (BuildContext context, Snapshot){
                                           if(Snapshot.hasData){
-                                            return Text('${Snapshot.data['activeCases']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),);
+                                            return Text('${Snapshot.data['activeCases']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18, color: Colors.white,),);
                                           }
                                           
                                           else{
@@ -239,18 +251,18 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                   Row(
                                     children: [
                                       Text(
-                                        'Total Recoveries: ',
+                                        'Total Cases: ',
                                         style: TextStyle(
                                           fontSize: 18,
-                                          // fontWeight: FontWeight.bold,
-                                          // color: Colors.grey[600],
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.redAccent,
                                         ),
                                       ),
                                       FutureBuilder(
                                         future: indiadata,
                                         builder: (BuildContext context, Snapshot){
                                           if(Snapshot.hasData){
-                                            return Text('${Snapshot.data['recovered']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),);
+                                            return Text('${Snapshot.data['totalCases']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18, color: Colors.redAccent), );
                                           }
                                           
                                           else{
@@ -268,39 +280,39 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                       ),
                                     ],
                                   ),
-                                  // SizedBox(height: 5,),
-                                  // Row(
-                                  //   children: [
-                                  //     Text(
-                                  //       'Deaths Today: ',
-                                  //       style: TextStyle(
-                                  //         fontSize: 18,
-                                  //         // fontWeight: FontWeight.bold,
-                                  //         // color: Colors.grey[600],
-                                  //       ),
-                                  //     ),
-                                  //     FutureBuilder(
-                                  //       future: indiadata,
-                                  //       builder: (BuildContext context, Snapshot){
-                                  //         if(Snapshot.hasData){
-                                  //           return Text('${Snapshot.data['deathsNew']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),);
-                                  //         }
+                                  SizedBox(height: 5,),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Total Recoveries: ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.greenAccent,
+                                        ),
+                                      ),
+                                      FutureBuilder(
+                                        future: indiadata,
+                                        builder: (BuildContext context, Snapshot){
+                                          if(Snapshot.hasData){
+                                            return Text('${Snapshot.data['recovered']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18, color: Colors.greenAccent,),);
+                                          }
                                           
-                                  //         else{
-                                  //           return SizedBox(
-                                  //             height: 10,
-                                  //             width: 10,
-                                  //             child: CircularProgressIndicator(
-                                  //               strokeWidth: 2,
-                                  //               valueColor:
-                                  //                 AlwaysStoppedAnimation<Color>(Colors.black),
-                                  //             ),
-                                  //           );
-                                  //         }
-                                  //       }
-                                  //     ),
-                                  //   ],
-                                  // ),
+                                          else{
+                                            return SizedBox(
+                                              height: 10,
+                                              width: 10,
+                                              child: CircularProgressIndicator(
+                                                strokeWidth: 2,
+                                                valueColor:
+                                                  AlwaysStoppedAnimation<Color>(Colors.black),
+                                              ),
+                                            );
+                                          }
+                                        }
+                                      ),
+                                    ],
+                                  ),
                                   SizedBox(height: 5,),
                                   Row(
                                     children: [
@@ -308,15 +320,15 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                         'Total Deaths: ',
                                         style: TextStyle(
                                           fontSize: 18,
-                                          // fontWeight: FontWeight.bold,
-                                          // color: Colors.grey[600],
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.red[700],
                                         ),
                                       ),
                                       FutureBuilder(
                                         future: indiadata,
                                         builder: (BuildContext context, Snapshot){
                                           if(Snapshot.hasData){
-                                            return Text('${Snapshot.data['deaths']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),);
+                                            return Text('${Snapshot.data['deaths']}'.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18, color: Colors.red[700],),);
                                           }
                                           
                                           else{
@@ -366,6 +378,8 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                             width: 50.0,
                                             child: GestureDetector(
                                                 onTap: () => showcard(
+                                                  (snapshot.data[index]['region'])  
+                                                        .toString(),
                                                     (snapshot.data[index]
                                                             ['newInfected'] + snapshot.data[index]['newRecovered'])  // logic for positive active cases
                                                         .toString(),
@@ -393,18 +407,18 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                                           padding: const EdgeInsets.all(8.0),
                                                           child: Column(
                                                               mainAxisAlignment:
-                                                                  MainAxisAlignment.start,
+                                                                  MainAxisAlignment.center,
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment.center,
                                                               children: <Widget>[
-                                                                Text(
-                                                                  'Recovered:${snapshot.data[index]['newRecovered'].toString()}',
-                                                                  style: TextStyle(
-                                                                      color:
-                                                                          Colors.blue,
-                                                                      fontWeight:
-                                                                          FontWeight.bold),
-                                                                ),
+                                                                // Text(
+                                                                //   'Recovered:${snapshot.data[index]['newRecovered'].toString()}',
+                                                                //   style: TextStyle(
+                                                                //       color:
+                                                                //           Colors.blue,
+                                                                //       fontWeight:
+                                                                //           FontWeight.bold),
+                                                                // ),
                                                                 Padding(
                                                                     padding:
                                                                         EdgeInsets.only(
@@ -423,7 +437,7 @@ class _IndiaCases3State extends State<IndiaCases3> {
                                                                   snapshot.data[index]
                                                                       ['region'],
                                                                   style: TextStyle(
-                                                                      fontSize: 18,
+                                                                      fontSize: 20,
                                                                       color: Colors.black, fontWeight: FontWeight.bold),
                                                                 ),
                                                               ]),
