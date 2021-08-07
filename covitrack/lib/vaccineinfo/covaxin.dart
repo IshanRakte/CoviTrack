@@ -111,13 +111,11 @@ class _VaccineInfoState extends State<VaccineInfo> {
                     children: [
                       Container(
                         // padding: EdgeInsets.all(5),
-                        child: Image.asset('assets/covaxin.jpg',width: 230,),
+                        child: Image.asset('assets/covaxin2.png',width: 230,),
                       ),
-                      SizedBox(height: 10,),
+                      // SizedBox(height: 10,),
 
                       
-                      Text(''),
-                      Text(''),
                       Text(''),
                       Text(
                           "COVAXINTM, India's indigenous COVID-19 vaccine Bharat Biotech is developed in collaboration with the ICMR-NIV.",
@@ -158,60 +156,60 @@ class _VaccineInfoState extends State<VaccineInfo> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
-                      Text(''),
-                      Text(''),
-                      Text('Press 1 if taken 1st dose of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Press 2 if taken both the doses of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {
-                                yespressed(1);
-                              },
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                          TextButton(
-                              onPressed: () {
-                                yespressed(2);
-                              },
-                              child: Text(
-                                '2',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                        ],
-                      ),
-                      Container(
-                        child: TextField(
-                          onChanged: (value) {
-                            date = int.parse(value);
-                          },
-                          keyboardType: TextInputType.datetime,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.grey[35],
-                              hintText: 'Date of 1st Dose',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(2.0),
-                                  borderSide: BorderSide.none)),
-                        ),
-                      ),
+                      // Text(''),
+                      // Text(''),
+                      // Text('Press 1 if taken 1st dose of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Text('Press 2 if taken both the doses of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(1);
+                      //         },
+                      //         child: Text(
+                      //           '1',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(2);
+                      //         },
+                      //         child: Text(
+                      //           '2',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //   ],
+                      // ),
+                      // Container(
+                      //   child: TextField(
+                      //     onChanged: (value) {
+                      //       date = int.parse(value);
+                      //     },
+                      //     keyboardType: TextInputType.datetime,
+                      //     decoration: InputDecoration(
+                      //         filled: true,
+                      //         fillColor: Colors.grey[35],
+                      //         hintText: 'Date of 1st Dose',
+                      //         border: OutlineInputBorder(
+                      //             borderRadius: BorderRadius.circular(2.0),
+                      //             borderSide: BorderSide.none)),
+                      //   ),
+                      // ),
                       Center(
                         child: Text(str == null ? "" : "${str.toString()}",style: TextStyle(
                                     fontSize: 18,

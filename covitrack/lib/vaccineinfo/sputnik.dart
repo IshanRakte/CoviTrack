@@ -116,8 +116,7 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 10,),                      
 
                       Text(''),
-                      Text(''),
-                      Text(''),
+                     
                       Text(
                           'Made by the Gamaleya Research Institute of Epidemiology and Microbiology in Russia. In India, Dr. Reddy’s Laboratories is the local distribution partner for Sputnik-V',
                           textAlign: TextAlign.center,
@@ -157,59 +156,59 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
-                      Text(''),
-                      Text('Press 1 if taken 1st dose of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Press 2 if taken both the doses of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {
-                                yespressed(1);
-                              },
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                          TextButton(
-                              onPressed: () {
-                                yespressed(2);
-                              },
-                              child: Text(
-                                '2',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                        ],
-                      ),
-                      Container(
-                        child: TextField(
-                          onChanged: (value) {
-                            date = int.parse(value);
-                          },
-                          keyboardType: TextInputType.datetime,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.grey[35],
-                              hintText: 'Date of 1st Dose',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(2.0),
-                                  borderSide: BorderSide.none)),
-                        ),
-                      ),
+                      // Text(''),
+                      // Text('Press 1 if taken 1st dose of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Text('Press 2 if taken both the doses of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(1);
+                      //         },
+                      //         child: Text(
+                      //           '1',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(2);
+                      //         },
+                      //         child: Text(
+                      //           '2',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //   ],
+                      // ),
+                      // Container(
+                      //   child: TextField(
+                      //     onChanged: (value) {
+                      //       date = int.parse(value);
+                      //     },
+                      //     keyboardType: TextInputType.datetime,
+                      //     decoration: InputDecoration(
+                      //         filled: true,
+                      //         fillColor: Colors.grey[35],
+                      //         hintText: 'Date of 1st Dose',
+                      //         border: OutlineInputBorder(
+                      //             borderRadius: BorderRadius.circular(2.0),
+                      //             borderSide: BorderSide.none)),
+                      //   ),
+                      // ),
                       Center(
                         child: Text(str == null ? "" : "${str.toString()}",
                             style: TextStyle(
