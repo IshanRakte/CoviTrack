@@ -117,6 +117,18 @@ class _ChennaiState extends State<Chennai> {
                                     "Address: Government Medical College Omandurar Government Estate, Anna Salai, Opposite to, Anna Salai, Triplicane, Chennai, Tamil Nadu 600002",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                 Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(fontSize: 15,color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall('tel:044 25666000');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -132,18 +144,7 @@ class _ChennaiState extends State<Chennai> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(fontSize: 15,color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall('tel:044 25666000');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                   
                                 ],
                               ),
                             ),
@@ -184,19 +185,7 @@ class _ChennaiState extends State<Chennai> {
                                     "Address: M.Ct.M. School Basket Ball Court, No.4(44, Audiappa St, near Lauders Gate, Opposite. Lady, Purasaiwakkam, Chennai, Tamil Nadu 600084",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//noble+hospital+chennai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a5265dff238aa47:0xcd5ea2a1d1ec7b4f?sa=X&ved=2ahUKEwilwOmK2pzyAhVnwTgGHQkHByMQ9RcwHHoECFcQBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
+                                            Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -211,6 +200,19 @@ class _ChennaiState extends State<Chennai> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//noble+hospital+chennai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a5265dff238aa47:0xcd5ea2a1d1ec7b4f?sa=X&ved=2ahUKEwilwOmK2pzyAhVnwTgGHQkHByMQ9RcwHHoECFcQBQ');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                        
                                 ],
                               ),
                             ),
@@ -250,19 +252,7 @@ class _ChennaiState extends State<Chennai> {
                                     "Address: 2, Mc Nichols Rd, Chetpet, Chennai, Tamil Nadu 600031",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              "https://www.google.com/maps/dir//Dr.+Mehta's+Hospitals,+2,+Mc+Nichols+Rd,+Chetpet,+Chennai,+Tamil+Nadu+600031/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a5265e51a427cad:0x3c7ce71e604b9f23?sa=X&ved=2ahUKEwjchtn52pzyAhVnppUCHSE9DSQQ48ADMAN6BAgBEEE");
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
+                                                    Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -275,6 +265,19 @@ class _ChennaiState extends State<Chennai> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              "https://www.google.com/maps/dir//Dr.+Mehta's+Hospitals,+2,+Mc+Nichols+Rd,+Chetpet,+Chennai,+Tamil+Nadu+600031/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3a5265e51a427cad:0x3c7ce71e604b9f23?sa=X&ved=2ahUKEwjchtn52pzyAhVnppUCHSE9DSQQ48ADMAN6BAgBEEE");
+                                        });
+                                      },
+                                    ),
+                                  ),
+                
                                 ],
                               ),
                             ),
@@ -410,6 +413,18 @@ class _HyderabadState extends State<Hyderabad> {
                                     "Address: 23-1-1, Bibi Bazar Rd, Opposite Mecca Masjid, Kotla Alijah, Moghalpura, Hyderabad, Telangana 500002",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                                    Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(fontSize: 15,color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall('tel:040 2456 8000');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -425,18 +440,7 @@ class _HyderabadState extends State<Hyderabad> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(fontSize: 15,color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall('tel:040 2456 8000');
-                                        });
-                                      },
-                                    ),
-                                  ),
+
                                 ],
                               ),
                             ),
@@ -477,19 +481,7 @@ class _HyderabadState extends State<Hyderabad> {
                                     "Address: Kothapet, Green Hill Colony Rd Number 4, Dilsukhnagar, Hyderabad, Telangana 500035",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//ozone+hospital+hyderabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bcb98bfb707e6bf:0xe800326257c20c37?sa=X&ved=2ahUKEwivuMW8-Z3yAhVUT30KHTfwBaIQ9RcwHHoECFYQBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
+                                                              Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -504,6 +496,19 @@ class _HyderabadState extends State<Hyderabad> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//ozone+hospital+hyderabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bcb98bfb707e6bf:0xe800326257c20c37?sa=X&ved=2ahUKEwivuMW8-Z3yAhVUT30KHTfwBaIQ9RcwHHoECFYQBQ');
+                                        });
+                                      },
+                                    ),
+                                  ),
+      
                                 ],
                               ),
                             ),
@@ -543,19 +548,7 @@ class _HyderabadState extends State<Hyderabad> {
                                     "Address: 1-100/1/CCH aparna cyber life road, Nalagandla, Telangana 500019",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              "https://www.google.com/maps/dir//citizens+hospital+hyderabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bcb92dc1b8176eb:0x37251fdef4c746cc?sa=X&ved=2ahUKEwjNueCA-p3yAhWRXCsKHXFkBIEQ9RcwJXoECGcQBQ");
-                                        });
-                                      },
-                                    ),
-                                  ),
-                                  Container(
+                                                   Container(
                                     height: 30,
                                     child: TextButton(
                                       child: const Text('Call',
@@ -568,6 +561,19 @@ class _HyderabadState extends State<Hyderabad> {
                                       },
                                     ),
                                   ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text('Open In Google Maps',style: TextStyle(color: Colors.white),),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              "https://www.google.com/maps/dir//citizens+hospital+hyderabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bcb92dc1b8176eb:0x37251fdef4c746cc?sa=X&ved=2ahUKEwjNueCA-p3yAhWRXCsKHXFkBIEQ9RcwJXoECGcQBQ");
+                                        });
+                                      },
+                                    ),
+                                  ),
+                 
                                 ],
                               ),
                             ),
@@ -708,6 +714,21 @@ class _AmritsarState extends State<Amritsar> {
                                     "Address: 76, Hari Bhawan, Kennedy Avenue, Amritsar, Punjab 143001",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                           Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _makePhoneCall(
+                                              'tel:0183 256 4437');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -723,21 +744,7 @@ class _AmritsarState extends State<Amritsar> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _makePhoneCall(
-                                              'tel:0183 256 4437');
-                                        });
-                                      },
-                                    ),
-                                  ),
+         
                                 ],
                               ),
                             ),
@@ -779,21 +786,7 @@ class _AmritsarState extends State<Amritsar> {
                                     "Address: Majitha-Verka Bypass Road, Amritsar - 143004, Amritsar, Punjab 143004",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//hospital+amritsar/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39196368fac3a7d9:0x3c1072af880d7974?sa=X&ved=2ahUKEwi63YOZ_J3yAhVC7HMBHdXFB6IQ9RcwAHoECAwQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -805,6 +798,21 @@ class _AmritsarState extends State<Amritsar> {
                                         setState(() {
                                           _launched = _makePhoneCall(
                                               'tel:0183 503 2222');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//hospital+amritsar/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39196368fac3a7d9:0x3c1072af880d7974?sa=X&ved=2ahUKEwi63YOZ_J3yAhVC7HMBHdXFB6IQ9RcwAHoECAwQBA');
                                         });
                                       },
                                     ),
@@ -850,21 +858,7 @@ class _AmritsarState extends State<Amritsar> {
                                     "Address: Majitha Rd, Opposite M.B Poly Technical College, Moon Avenue, Diamond Avenue, Amritsar, Punjab 143001",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//covid+19+hospital+in+amritsar/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3919637472f222df:0xa7a8117db29df724?sa=X&ved=2ahUKEwiC5ev1_J3yAhXhILcAHUAnCu4Q9RcwAHoECAwQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -876,6 +870,21 @@ class _AmritsarState extends State<Amritsar> {
                                         setState(() {
                                           _launched = _makePhoneCall(
                                               'tel:085910 18820');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//covid+19+hospital+in+amritsar/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3919637472f222df:0xa7a8117db29df724?sa=X&ved=2ahUKEwiC5ev1_J3yAhXhILcAHUAnCu4Q9RcwAHoECAwQBA');
                                         });
                                       },
                                     ),
@@ -1019,6 +1028,21 @@ class _AhmedabadState extends State<Ahmedabad> {
                                     "Address: Near Tapovan Circle, Visat - Gandhinagar Hwy, Chandkheda, Ahmedabad, Gujarat 382424",
                                     style: TextStyle(fontSize: 18),
                                   ),
+                                                        Container(
+                                    height: 30,
+                                    child: TextButton(
+                                      child: const Text('Call',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white)),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched =
+                                              _makePhoneCall('tel:075739 49408');
+                                        });
+                                      },
+                                    ),
+                                  ),
                                   Container(
                                     height: 40,
                                     child: TextButton(
@@ -1034,21 +1058,7 @@ class _AhmedabadState extends State<Ahmedabad> {
                                       },
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    child: TextButton(
-                                      child: const Text('Call',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white)),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched =
-                                              _makePhoneCall('tel:075739 49408');
-                                        });
-                                      },
-                                    ),
-                                  ),
+            
                                 ],
                               ),
                             ),
@@ -1090,21 +1100,7 @@ class _AhmedabadState extends State<Ahmedabad> {
                                     "Address: Sterling Hospital Road near Maharaja Agrasen Vidhyalaya, Memnagar, Ahmedabad, Gujarat 380052",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//hospitals+in+ahmedabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x395e84afbc804959:0x1bd6f237ba587f77?sa=X&hl=en&ved=2ahUKEwjp4sDU_p3yAhW4xzgGHUnNB7sQ9RcwAHoECBEQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -1116,6 +1112,21 @@ class _AhmedabadState extends State<Ahmedabad> {
                                         setState(() {
                                           _launched =
                                               _makePhoneCall('tel:079 4001 1111');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//hospitals+in+ahmedabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x395e84afbc804959:0x1bd6f237ba587f77?sa=X&hl=en&ved=2ahUKEwjp4sDU_p3yAhW4xzgGHUnNB7sQ9RcwAHoECBEQBA');
                                         });
                                       },
                                     ),
@@ -1161,21 +1172,7 @@ class _AhmedabadState extends State<Ahmedabad> {
                                     "Address: Sarkhej - Gandhinagar Hwy, opposite of Karnavati Club, Ramdev Nagar, Ahmedabad, Gujarat 380015",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//hospitals+in+ahmedabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x395e9b25101211f5:0x2f374a23db429344?sa=X&hl=en&ved=2ahUKEwji1qex_53yAhVdyzgGHUQNABEQ9RcwAHoECA8QBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -1187,6 +1184,21 @@ class _AhmedabadState extends State<Ahmedabad> {
                                         setState(() {
                                           _launched = _makePhoneCall(
                                               'tel:079 4020 3000');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//hospitals+in+ahmedabad/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x395e9b25101211f5:0x2f374a23db429344?sa=X&hl=en&ved=2ahUKEwji1qex_53yAhVdyzgGHUQNABEQ9RcwAHoECA8QBA');
                                         });
                                       },
                                     ),
@@ -1331,21 +1343,7 @@ class _GoaState extends State<Goa> {
                                     "Address: N17, Bambolim, Goa 403202",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//Goa+Medical+College+%26+Hospital,+Bambolim/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfbf57b548f663:0x50785c06ee0da5fc?sa=X&ved=2ahUKEwjJuIC0hp7yAhU8_XMBHb5WB6EQ9RcwHHoECEIQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -1357,6 +1355,21 @@ class _GoaState extends State<Goa> {
                                         setState(() {
                                           _launched =
                                               _makePhoneCall('tel:0832 245 8727');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//Goa+Medical+College+%26+Hospital,+Bambolim/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfbf57b548f663:0x50785c06ee0da5fc?sa=X&ved=2ahUKEwjJuIC0hp7yAhU8_XMBHb5WB6EQ9RcwHHoECEIQBA');
                                         });
                                       },
                                     ),
@@ -1402,21 +1415,7 @@ class _GoaState extends State<Goa> {
                                     "Address: Panaji, Dr E Borges Rd, Dona Paula, Goa 403004",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//hospital+in+goa/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfc0cb6f59b763:0x5fef15ef316a7759?sa=X&ved=2ahUKEwjfo7LdhJ7yAhXkILcAHYYFCm0Q9RcwAHoECBMQBA');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -1428,6 +1427,21 @@ class _GoaState extends State<Goa> {
                                         setState(() {
                                           _launched =
                                               _makePhoneCall('tel:1800 102 5555');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//hospital+in+goa/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfc0cb6f59b763:0x5fef15ef316a7759?sa=X&ved=2ahUKEwjfo7LdhJ7yAhXkILcAHYYFCm0Q9RcwAHoECBMQBA');
                                         });
                                       },
                                     ),
@@ -1473,21 +1487,7 @@ class _GoaState extends State<Goa> {
                                     "Address: Old Station Rd, near Carmelite Monastery, Malbhat, Margao, Goa 403601",
                                     style: TextStyle(fontSize: 18),
                                   ),
-                                  Container(
-                                    height: 40,
-                                    child: TextButton(
-                                      child: const Text(
-                                        'Open In Google Maps',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        setState(() {
-                                          _launched = _launchUniversalLinkIos(
-                                              'https://www.google.com/maps/dir//hospital+in+goa/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfb3c6c5c4520d:0xa4045e195fdd67b3?sa=X&ved=2ahUKEwjix8e5hZ7yAhX-ILcAHZe-Do8Q9RcwAHoECA4QBQ');
-                                        });
-                                      },
-                                    ),
-                                  ),
+                                  
                                   Container(
                                     height: 30,
                                     child: TextButton(
@@ -1499,6 +1499,21 @@ class _GoaState extends State<Goa> {
                                         setState(() {
                                           _launched = _makePhoneCall(
                                               'tel:0832 672 8888');
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 40,
+                                    child: TextButton(
+                                      child: const Text(
+                                        'Open In Google Maps',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://www.google.com/maps/dir//hospital+in+goa/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bbfb3c6c5c4520d:0xa4045e195fdd67b3?sa=X&ved=2ahUKEwjix8e5hZ7yAhX-ILcAHZe-Do8Q9RcwAHoECA4QBQ');
                                         });
                                       },
                                     ),
