@@ -117,105 +117,140 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 10,),
  
-                      Text(''),
-                      Text(''),
-                      Text(''),
-                      Text(
-                          'The Serum Institute Of India and Indian council are jointly conducting a phase II/III.',
-                          textAlign: TextAlign.center,
+                      
+                      // Text(''),
+                      // Text('Press 1 if taken 1st dose of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Text('Press 2 if taken both the doses of the vaccine.',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //     )),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(1);
+                      //         },
+                      //         child: Text(
+                      //           '1',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //     TextButton(
+                      //         onPressed: () {
+                      //           yespressed(2);
+                      //         },
+                      //         child: Text(
+                      //           '2',
+                      //           style: TextStyle(
+                      //               fontSize: 20,
+                      //               fontWeight: FontWeight.bold,
+                      //               color: Colors.black87),
+                      //         )),
+                      //   ],
+                      // ),
+                      // Container(
+                      //   child: TextField(
+                      //     onChanged: (value) {
+                      //       date = int.parse(value);
+                      //     },
+                      //     keyboardType: TextInputType.datetime,
+                      //     decoration: InputDecoration(
+                      //         filled: true,
+                      //         fillColor: Colors.grey[35],
+                      //         hintText: 'Date of 1st Dose',
+                      //         border: OutlineInputBorder(
+                      //             borderRadius: BorderRadius.circular(2.0),
+                      //             borderSide: BorderSide.none)),
+                      //   ),
+                      // ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            // height: 50,
+                            color: Color(0xff252A34),
+                            child: Column(
+                              children: [
+                                SizedBox(height: 5,),
+                        Text(
+                            'The Serum Institute Of India and Indian council are jointly conducting a phase II/III.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        Text(
+                            'Appearance: The solution is Colourless to slightly Brown with pH=6.6.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        Text(
+                          'Price:',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                          'Appearance: The solution is Colourless to slightly Brown with pH=6.6.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                        'Price:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          ),
+                          textAlign: TextAlign.left,
                         ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Text('Currently FREE in Government hospitals',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Rs 500-800 in Private hospitals',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Gap between the Two doses: 12-16 weeks',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                          'Age: Approved for 18+(Dose adjustments for every age group may vary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Are you Vaccinated with COVISHIELD?',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(''),
-                      Text('Press 1 if taken 1st dose of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Press 2 if taken both the doses of the vaccine.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {
-                                yespressed(1);
-                              },
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                          TextButton(
-                              onPressed: () {
-                                yespressed(2);
-                              },
-                              child: Text(
-                                '2',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
-                              )),
-                        ],
-                      ),
-                      Container(
-                        child: TextField(
-                          onChanged: (value) {
-                            date = int.parse(value);
-                          },
-                          keyboardType: TextInputType.datetime,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.grey[35],
-                              hintText: 'Date of 1st Dose',
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(2.0),
-                                  borderSide: BorderSide.none)),
+                        Text('Currently FREE in Government hospitals',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        Text('Rs 500-800 in Private hospitals',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        Text('Gap between the Two doses: 12-16 weeks',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        Text(
+                            'Age: Approved for 18+(Dose adjustments for every age group may vary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                            )),
+                        // Text('Are you Vaccinated with COVISHIELD?',
+                        //     textAlign: TextAlign.center,
+                        //     style: TextStyle(
+                        //       fontWeight: FontWeight.bold,
+                        //       color: Colors.white
+                        //     )),
+                            SizedBox(height: 10,)
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                       SizedBox(height: 15),
