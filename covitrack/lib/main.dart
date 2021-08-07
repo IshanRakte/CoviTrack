@@ -1,6 +1,7 @@
 // import 'dart:js';
 import 'package:covitrack/bnb/bottomNavigation_oxypulse.dart';
 import 'package:covitrack/bnb/bottomNavigation_tracker.dart';
+import 'package:covitrack/bnb/bottomNavigation_vaccineinfo.dart';
 import 'package:covitrack/screens/oxypulse.dart';
 import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ void main() {
     routes: {
         '/casetracker': (context) => CaseTracker(),
         '/vaccine_tracker': (context) => bottomNavTracker2(),
-        '/vaccine_info': (context) => VaccineInfo(),
+        '/vaccine_info': (context) => bottomNavTracker3(),
         '/symptoms': (context) => Symptoms(),
         '/precautions': (context) => Precautions(),
         '/emergency': (context) => Emergency(),
