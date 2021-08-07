@@ -52,11 +52,12 @@ class _VaccineInfoState extends State<VaccineInfo> {
       //   title: Text('COVAXIN'),
       // ),
       body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Color.fromRGBO(255, 148, 130, 1), Color.fromRGBO(125, 119, 255, 1)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight)),
+        color: Color(0xff08D9D6),
+        // decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //         colors: [Color.fromRGBO(255, 148, 130, 1), Color.fromRGBO(125, 119, 255, 1)],
+        //         begin: Alignment.topLeft,
+        //         end: Alignment.bottomRight)),
         alignment: Alignment.center,
         child: SafeArea(
           child: Column(
@@ -87,7 +88,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
-                            color: Colors.white),
+                            color: Color(0xff252A34)),
                       ),
                     ),
                   ],
@@ -97,7 +98,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                   thickness: 5,
                   indent: 20,
                   endIndent: 20,
-                  color: Colors.white,
+                  color: Color(0xff252A34),
                 ),
                 SizedBox(height: 20,),
               // SizedBox(

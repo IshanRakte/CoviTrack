@@ -18,13 +18,14 @@ class _VaccineInfoState extends State<VaccineInfo> {
       //   title: Text("Vaccine Information"),
       // ),
       body:Container(
-         decoration: BoxDecoration(
-           gradient: LinearGradient(
-             colors: [Colors.greenAccent.shade400, Colors.blue],
-             begin: Alignment.topLeft,
-             end: Alignment.bottomRight
-           )
-         ),
+        color: Color(0xff08D9D6),
+        //  decoration: BoxDecoration(
+        //    gradient: LinearGradient(
+        //      colors: [Colors.greenAccent.shade400, Colors.blue],
+        //      begin: Alignment.topLeft,
+        //      end: Alignment.bottomRight
+        //    )
+        //  ),
 
 
         child: SafeArea(
