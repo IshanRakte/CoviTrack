@@ -1,28 +1,6 @@
 import 'package:covitrack/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-// import 'package:animated_splash_screen/animated_splash_screen.dart';
-// import 'package:page_transition/page_transition.dart';
-
-// class SplashScreen extends StatefulWidget {
-
-
-//   @override
-//   _SplashScreenState createState() => _SplashScreenState();
-// }
-
-// class _SplashScreenState extends State<SplashScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: AnimatedSplashScreen(splash: 'assets/logo2.png' , nextScreen: HomePage(), backgroundColor: Colors.black,)
-      
-    
-//     );
-//   }
-// }
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -30,32 +8,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   Timer(Duration(seconds: 3), () {
-  //     Navigator.of(context)
-  //         .pushReplacement(MaterialPageRoute(builder: (_) => Login()));
-  //   });
-  // }
-
-//   @override
-//   void initState() {
-//     // TODO: implement initState
-//     super.initState();
-//     Timer(Duration(seconds: 3), (){
-//       Navigator.pushReplacementNamed(context, '/login');
-//   });
-// }
-
-@override
+  @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 3), (){
+    Timer(Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, '/home');
-
     });
   }
 
@@ -76,18 +33,11 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 20,
             ),
             CircularProgressIndicator(
-              // valueColor: AlwaysStoppedAnimation<Color>(Colors.teal),
-              // backgroundColor: Colors.red,
-              // strokeWidth: 5,
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xff08D9D6)),
+                backgroundColor: Color(0xff252A34)),
+            SizedBox(
+              height: 20,
             ),
-
-            SizedBox(height: 20,),
-
-            // LinearProgressIndicator(
-            //   // valueColor: AlwaysStoppedAnimation<Color>(Colors.teal),
-            //   // backgroundColor: Colors.red,
-            //   // minHeight: 5,
-            // )
           ],
         ),
       ),

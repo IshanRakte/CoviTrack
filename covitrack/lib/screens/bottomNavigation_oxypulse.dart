@@ -1,23 +1,19 @@
-import 'package:covitrack/tracker/indiacases3.dart';
-import 'package:covitrack/tracker/tracker.dart';
-import 'package:covitrack/tracker/world_countrywise.dart';
+import 'package:covitrack/screens/oxypulse.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
-class bottomNavTracker extends StatefulWidget {
-  const bottomNavTracker({Key key}) : super(key: key);
+class bottomNavTracker2 extends StatefulWidget {
+  const bottomNavTracker2({Key key}) : super(key: key);
 
   @override
-  _bottomNavTrackerState createState() => _bottomNavTrackerState();
+  _bottomNavTracker2State createState() => _bottomNavTracker2State();
 }
 
-class _bottomNavTrackerState extends State<bottomNavTracker> {
+class _bottomNavTracker2State extends State<bottomNavTracker2> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
-    CaseTracker(),
-    World(),
-    IndiaCases3(),
+    Oxy(),
+    Pulse(),
   ];
 
   void _onItemTap(int index) {
@@ -53,28 +49,20 @@ class _bottomNavTrackerState extends State<bottomNavTracker> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: FaIcon(
-              FontAwesomeIcons.globeAfrica,
+              FontAwesomeIcons.lungs,
               size: 20,
               // color: Colors.white,
             ),
-            label: 'World Stats',
+            label: 'Oxygen',
           ),
           BottomNavigationBarItem(
             icon: FaIcon(
-              FontAwesomeIcons.flagCheckered,
+              FontAwesomeIcons.heartbeat,
               size: 20,
               // color: Colors.white,
               
             ),
-            label: 'Country-Wise Stats',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.flag,
-              size: 20,
-              // color: Colors.white,
-            ),
-            label: 'India Stats',
+            label: 'Pulse',
           ),
         ],
         currentIndex: _selectedIndex,

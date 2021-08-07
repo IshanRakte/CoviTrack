@@ -1,5 +1,7 @@
 // import 'dart:js';
+import 'package:covitrack/screens/bottomNavigation_oxypulse.dart';
 import 'package:covitrack/screens/bottomNavigation_tracker.dart';
+import 'package:covitrack/screens/oxypulse.dart';
 import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:covitrack/screens/vaccinetracker.dart';
@@ -14,7 +16,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
         '/casetracker': (context) => CaseTracker(),
-        '/vaccine_tracker': (context) => VaccineTracker2(),
+        '/vaccine_tracker': (context) => bottomNavTracker2(),
         '/vaccine_info': (context) => VaccineInfo(),
         '/symptoms': (context) => Symptoms(),
         '/precautions': (context) => Precautions(),
@@ -189,7 +191,7 @@ class HomePage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Text(
-                                        'Vaccine Tracker >',
+                                        'Oxygen / Pulse >',
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
