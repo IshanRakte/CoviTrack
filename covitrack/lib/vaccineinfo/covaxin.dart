@@ -115,47 +115,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                       ),
                       // SizedBox(height: 10,),
 
-                      
-                      Text(''),
-                      Text(
-                          "COVAXINTM, India's indigenous COVID-19 vaccine Bharat Biotech is developed in collaboration with the ICMR-NIV.",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Appearance: The solution is Colourless.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Price:',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Rs 400 in government hospitals',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                        'Rs 1200-1500 in Private hospitals',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text('Gap between the Two doses:  4-6 week',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                          'Age: Age : Approved for above 12+(Dose adjustments for every age group may vary)',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
+                     
                       // Text(''),
                       // Text(''),
                       // Text('Press 1 if taken 1st dose of the vaccine.',
@@ -210,6 +170,81 @@ class _VaccineInfoState extends State<VaccineInfo> {
                       //             borderSide: BorderSide.none)),
                       //   ),
                       // ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            // height: 50,
+                            color: Color(0xff252A34),
+                            child: Column(
+                              children: [
+                                SizedBox(height: 5,),
+                        Text(
+                          "COVAXINTM, India's indigenous COVID-19 vaccine Bharat Biotech is developed in collaboration with the ICMR-NIV.",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text('Appearance: The solution is Colourless.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text('Price:',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text('Rs 400 in government hospitals',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text(
+                        'Rs 1200-1500 in Private hospitals',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                        ),
+                      ),
+                      Text('Gap between the Two doses:  4-6 week',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text(
+                          'Age: Age : Approved for above 12+(Dose adjustments for every age group may vary)',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                            SizedBox(height: 10,)
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                       Center(
                         child: Text(str == null ? "" : "${str.toString()}",style: TextStyle(
                                     fontSize: 18,

@@ -37,10 +37,10 @@ class _bottomNavTracker3State extends State<bottomNavTracker3> {
         //   ),
         // ),
         // child: _widgetOptions.elementAt(_selectedIndex), =>>> Need to add this
-        child: SafeArea(
+        
           child: Center(
             child: _widgetOptions.elementAt(_selectedIndex),
-          ),
+          
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
