@@ -99,7 +99,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                      
@@ -147,7 +147,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       
@@ -204,7 +204,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                      
@@ -252,7 +252,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       
@@ -306,7 +306,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                      
@@ -354,7 +354,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       
@@ -408,7 +408,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                      
@@ -456,7 +456,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       
@@ -510,7 +510,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                      
@@ -558,7 +558,7 @@ class Emergency extends StatelessWidget {
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                         ),
                                       ),
                                       

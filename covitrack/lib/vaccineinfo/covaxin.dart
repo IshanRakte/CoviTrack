@@ -224,7 +224,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
 
                         ),
                       ),
-                      Text('Gap between the Two doses:  4-6 week',
+                      Text('Gap between the Two doses: 4-6 week',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -232,7 +232,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
 
                           )),
                       Text(
-                          'Age: Age : Approved for above 12+(Dose adjustments for every age group may vary)',
+                          'Age : Approved for above 12+(Dose adjustments for every age group may vary)',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
