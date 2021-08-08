@@ -115,47 +115,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 10,),                      
 
-                      Text(''),
-                     
-                      Text(
-                          'Made by the Gamaleya Research Institute of Epidemiology and Microbiology in Russia. In India, Dr. Reddy’s Laboratories is the local distribution partner for Sputnik-V',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Appearance: The solution is Colourless.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                        'Price:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Text('Rs 995-1200',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Gap between two doses: 3-4 weeks',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text(
-                          'Age: Approved for 18+(Dose adjustments for every age group may vary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Text('Are you Vaccinated with SPUTNIK-V?',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
                       // Text(''),
                       // Text('Press 1 if taken 1st dose of the vaccine.',
                       //     textAlign: TextAlign.left,
@@ -209,6 +168,81 @@ class _HomePageState extends State<HomePage> {
                       //             borderSide: BorderSide.none)),
                       //   ),
                       // ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: BorderSide(width: 2, color: Colors.black,),
+                    ),
+                    elevation: 4,
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            // height: 50,
+                            color: Color(0xff252A34),
+                            child: Column(
+                              children: [
+                                SizedBox(height: 5,),
+                        
+                      Text(
+                          'Made by the Gamaleya Research Institute of Epidemiology and Microbiology in Russia. In India, Dr. Reddy’s Laboratories is the local distribution partner for Sputnik-V',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text('Appearance: The solution is Colourless.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text(
+                        'Price:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      Text('Rs 995-1200',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text('Gap between two doses: 3-4 weeks',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                      Text(
+                          'Age: Approved for 18+(Dose adjustments for every age group may vary',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )),
+                        // Text('Are you Vaccinated with COVISHIELD?',
+                        //     textAlign: TextAlign.center,
+                        //     style: TextStyle(
+                        //       fontWeight: FontWeight.bold,
+                        //       color: Colors.white
+                        //     )),
+                            SizedBox(height: 10,)
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                       Center(
                         child: Text(str == null ? "" : "${str.toString()}",
                             style: TextStyle(
