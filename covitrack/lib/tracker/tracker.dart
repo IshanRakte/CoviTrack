@@ -106,234 +106,243 @@ class _CaseTrackerState extends State<CaseTracker> {
                 SizedBox(
                   height: 30,
                 ), 
-                Center(
-                  child: Card(
-                    elevation: 2,
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      height: 130,
-                      width: 300,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              Text(
-                                'Worldwide cases',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey[700],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  child: Center(
+                    child: Card(
+                      elevation: 2,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        height: 130,
+                        width: double.infinity,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 8,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.cases}',
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                    AlwaysStoppedAnimation<Color>(Colors.black),
-                                      );
-                                  }),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Container(
-                                  child: Image.asset(
-                                'assets/world.jpg',
-                                width: 90,
-                              )),
-                            ],
-                          ),
-                        ],
+                                Text(
+                                  'Worldwide cases',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey[700],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.cases}',
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                      AlwaysStoppedAnimation<Color>(Colors.black),
+                                        );
+                                    }),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Container(
+                                    child: Image.asset(
+                                  'assets/world.jpg',
+                                  width: 90,
+                                )),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
                 // SizedBox(height: 8,),
-                Center(
-                  child: Card(
-                    elevation: 2,
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      height: 130,
-                      width: 300,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              Text(
-                                'Deaths',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.red[300],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  child: Center(
+                    child: Card(
+                      elevation: 2,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        height: 130,
+                        width: double.infinity,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 8,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.deaths}',
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.red[600],
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                    AlwaysStoppedAnimation<Color>(Colors.black),
-                                      );
-                                  }),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Container(
-                                  child: Image.asset(
-                                'assets/redplus.jpeg',
-                                width: 60,
-                              )),
-                            ],
-                          ),
-                        ],
+                                Text(
+                                  'Deaths',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red[300],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.deaths}',
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red[600],
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                      AlwaysStoppedAnimation<Color>(Colors.black),
+                                        );
+                                    }),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Container(
+                                    child: Image.asset(
+                                  'assets/redplus.jpeg',
+                                  width: 60,
+                                )),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
                 // SizedBox(height: 8,),
-                Center(
-                  child: Card(
-                    elevation: 2,
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      height: 130,
-                      width: 300,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              Text(
-                                'Recovered',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green[300],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  child: Center(
+                    child: Card(
+                      elevation: 2,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        height: 130,
+                        width: double.infinity,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 8,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.recovered}',
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.green,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                    AlwaysStoppedAnimation<Color>(Colors.black),
-                                      );
-                                  }),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Container(
-                                  child: Image.asset(
-                                'assets/recovered.jpeg',
-                                width: 60,
-                              )),
-                            ],
-                          ),
-                        ],
+                                Text(
+                                  'Recovered',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green[300],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.recovered}',
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.green,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                      AlwaysStoppedAnimation<Color>(Colors.black),
+                                        );
+                                    }),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Container(
+                                    child: Image.asset(
+                                  'assets/recovered.jpeg',
+                                  width: 60,
+                                )),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -386,254 +395,257 @@ class _CaseTrackerState extends State<CaseTracker> {
           SizedBox(
             height: 8,
           ),
-          Container(
-            padding: EdgeInsets.all(16),
-            height: 400,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 85,
-                          width: 150,
-                          color: Colors.grey[300],
-                          padding: EdgeInsets.all(8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Cases today',
-                                style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.todayCases}',
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                                Colors.black),
-                                      );
-                                  }),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Container(
-                          height: 85,
-                          width: 150,
-                          color: Colors.grey[300],
-                          padding: EdgeInsets.all(8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Recovered today',
-                                style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.todayRecovered}',
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                                Colors.black),
-                                      );
-                                  }),
-                            ],
-                          ),
-                        ),
-                        //
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 85,
-                          width: 150,
-                          color: Colors.grey[300],
-                          padding: EdgeInsets.all(8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Deaths today',
-                                style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.todayDeaths}',
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                                Colors.black),
-                                      );
-                                  }),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Container(
-                          height: 85,
-                          width: 150,
-                          color: Colors.grey[300],
-                          padding: EdgeInsets.all(8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Critical',
-                                style: TextStyle(
-                                  // fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              FutureBuilder<Tcases>(
-                                  future: getJsonData(),
-                                  builder: (BuildContext context, Snapshot) {
-                                    if (Snapshot.hasData) {
-                                      final covid = Snapshot.data;
-                                      return Text(
-                                        '${covid?.critical}',
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
-                                        ),
-                                      );
-                                    } else if (Snapshot.hasError) {
-                                      return Text(Snapshot.error.toString());
-                                    } else
-                                      return CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                                Colors.black),
-                                      );
-                                  }),
-                            ],
-                          ),
-                        ),
-                        //
-                      ],
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  height: 85,
-                  width: double.infinity,
-                  color: Colors.grey[300],
-                  padding: EdgeInsets.all(8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Container(
+              // padding: EdgeInsets.all(16),
+              height: 400,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
-                        'Total affected Countries',
-                        style: TextStyle(
-                          // fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      FutureBuilder<Tcases>(
-                          future: getJsonData(),
-                          builder: (BuildContext context, Snapshot) {
-                            if (Snapshot.hasData) {
-                              final covid = Snapshot.data;
-                              return Text(
-                                '${covid?.affectedCountries}',
-                                style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 105,
+                            width: 150,
+                            color: Colors.grey[300],
+                            padding: EdgeInsets.all(8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Cases today',
+                                  style: TextStyle(
+                                    // fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
                                 ),
-                              );
-                            } else if (Snapshot.hasError) {
-                              return Text(Snapshot.error.toString());
-                            } else
-                              return CircularProgressIndicator(
-                                valueColor:
-                                    AlwaysStoppedAnimation<Color>(Colors.black),
-                              );
-                          }),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.todayCases}',
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.black),
+                                        );
+                                    }),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Container(
+                            height: 105,
+                            width: 150,
+                            color: Colors.grey[300],
+                            padding: EdgeInsets.all(8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Recovered today',
+                                  style: TextStyle(
+                                    // fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.todayRecovered}',
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.black),
+                                        );
+                                    }),
+                              ],
+                            ),
+                          ),
+                          //
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 105,
+                            width: 150,
+                            color: Colors.grey[300],
+                            padding: EdgeInsets.all(8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Deaths today',
+                                  style: TextStyle(
+                                    // fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.todayDeaths}',
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.black),
+                                        );
+                                    }),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Container(
+                            height: 105,
+                            width: 150,
+                            color: Colors.grey[300],
+                            padding: EdgeInsets.all(8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Critical',
+                                  style: TextStyle(
+                                    // fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                FutureBuilder<Tcases>(
+                                    future: getJsonData(),
+                                    builder: (BuildContext context, Snapshot) {
+                                      if (Snapshot.hasData) {
+                                        final covid = Snapshot.data;
+                                        return Text(
+                                          '${covid?.critical}',
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        );
+                                      } else if (Snapshot.hasError) {
+                                        return Text(Snapshot.error.toString());
+                                      } else
+                                        return CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                  Colors.black),
+                                        );
+                                    }),
+                              ],
+                            ),
+                          ),
+                          //
+                        ],
+                      )
                     ],
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Container(
+                    height: 85,
+                    width: double.infinity,
+                    color: Colors.grey[300],
+                    padding: EdgeInsets.all(8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Total affected Countries',
+                          style: TextStyle(
+                            // fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        FutureBuilder<Tcases>(
+                            future: getJsonData(),
+                            builder: (BuildContext context, Snapshot) {
+                              if (Snapshot.hasData) {
+                                final covid = Snapshot.data;
+                                return Text(
+                                  '${covid?.affectedCountries}',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                );
+                              } else if (Snapshot.hasError) {
+                                return Text(Snapshot.error.toString());
+                              } else
+                                return CircularProgressIndicator(
+                                  valueColor:
+                                      AlwaysStoppedAnimation<Color>(Colors.black),
+                                );
+                            }),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              
             ),
-            
           ),
           
         ],
