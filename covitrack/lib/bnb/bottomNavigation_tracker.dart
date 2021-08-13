@@ -3,7 +3,6 @@ import 'package:covitrack/tracker/tracker.dart';
 import 'package:covitrack/tracker/world_countrywise.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 class bottomNavTracker extends StatefulWidget {
   const bottomNavTracker({Key key}) : super(key: key);
