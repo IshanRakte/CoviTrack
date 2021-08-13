@@ -184,7 +184,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: (){
-                          Navigator.pushNamed(context, '/bnbsymptoms');
+                          Navigator.pushNamed(context, '/vaccinetracker');
                         },
                         child: Column(
                           children: [
@@ -198,7 +198,7 @@ class HomePage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Text(
-                                        'Oxygen / Pulse >',
+                                        'Vaccine Tracker >',
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
@@ -279,7 +279,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: (){
-                          Navigator.pushNamed(context, '/symptoms');
+                          Navigator.pushNamed(context, '/bnbsymptoms');
                         },
                         child: Column(
                           children: [
