@@ -5,7 +5,7 @@ import 'package:covitrack/bnb/bottomNavigation_vaccineinfo.dart';
 import 'package:covitrack/screens/oxypulse.dart';
 import 'package:covitrack/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:covitrack/screens/vaccinetracker.dart';
+import 'package:covitrack/tracker/vaccinetracker.dart';
 import 'package:covitrack/screens/emergency.dart';
 import 'package:covitrack/screens/precautions.dart';
 import 'package:covitrack/screens/symptoms.dart';
@@ -24,7 +24,8 @@ void main() {
         '/precautions': (context) => Precautions(),
         '/emergency': (context) => Emergency(),
         '/bottomnavtracker': (context) => bottomNavTracker(),
-        '/home': (context) => HomePage()
+        '/home': (context) => HomePage(),
+        '/vaccinetracker': (context) => VaccineTracker()
       },
 
       home: SplashScreen(),
@@ -181,7 +182,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: (){
-                          Navigator.pushNamed(context, '/vaccine_tracker');
+                          Navigator.pushNamed(context, '/vaccinetracker');
                         },
                         child: Column(
                           children: [
