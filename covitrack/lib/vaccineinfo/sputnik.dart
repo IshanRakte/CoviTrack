@@ -1,47 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(Sputnik());
 }
 
 class Sputnik extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Sputnik-V',
-        home: HomePage());
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  String str = '';
-  String str2 = '';
-  int a = 0;
-  int date;
-
-  void yespressed(int a) {
-    String textstr = '';
-    if (a == 1) {
-      textstr =
-          'Enter the date of your 1st dose for Sputnik-V Vaccine in the form DDMMYYYY';
-      textstr = ("Take the 2nd dose of vaccine within 21-28 days from $date. ");
-    } else
-      textstr = 'Great, you are now vaccinated with SPUTNIK-V!';
-
-    setState(() {
-      str = textstr;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,15 +33,15 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
-                        // IconButton(
-                        //   onPressed: () {
-                        //     Navigator.pop(context);
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.arrow_back_ios_new,
-                        //     color: Colors.white,
-                        //   ),
-                        // ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: FaIcon(
+                          FontAwesomeIcons.angleLeft),
+                            color: Color(0xff252A34),
+                          ),
+                        
                       ],
                     ),
                     SizedBox(
@@ -243,13 +208,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Center(
-                        child: Text(str == null ? "" : "${str.toString()}",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500)),
-                      )
+              
                     ],
                   ),
                 ),

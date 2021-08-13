@@ -32,7 +32,9 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                         child: GestureDetector(
                             onTap: () => showcard(
                               snapshot.data[index]['country']
-                                    .toString(),),
+                                    .toString(),
+                                     (snapshot.data[index]['country'])  
+                                                        .toString(),),
                             child: Card(
                               //elevation: 10,
                               // child: Padding(padding: EdgeInsets.symmetric(vertical: 10,horizontal: 8),
@@ -55,6 +57,8 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                                           Padding(padding: EdgeInsets.all(10)),
                                           Text(
                                             snapshot.data[index]['country'],
+                                        
+                                                      
                                             
                                             style: TextStyle(
                                                 fontSize: 18,
@@ -72,7 +76,7 @@ class _VaccineTrackerState extends State<VaccineTracker> {
 
    
 
-  Future showcard(String ind) async {
+  Future showcard(String ind, ind2) async {
     await showDialog(
         context: context,
         builder: (BuildContext contect) {
@@ -87,6 +91,10 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                     "$ind",
                     style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
                   ),
+                  Text(
+                    "$ind2",
+                    style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
 
 
                 ],
@@ -96,7 +104,7 @@ class _VaccineTrackerState extends State<VaccineTracker> {
         });
   }
 
-  final String url = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
+  final String url = "https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1";
   Future<List> datas;
     Future<Map<String,dynamic>>
  indiadata;
@@ -357,6 +365,8 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                                             child: GestureDetector(
                                                 onTap: () => showcard(
                                                   (snapshot.data[index]['country'])  
+                                                        .toString(),
+                                                         (snapshot.data[index]['timeline'])  
                                                         .toString(),),
                                                 child: Card(
                                                   elevation: 2,

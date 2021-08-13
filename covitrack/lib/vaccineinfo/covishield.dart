@@ -1,49 +1,15 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(Covishield());
 }
 
 class Covishield extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Covishield',
-        home: HomePage());
-  }
-}
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  String str = '';
-  String str2 = '';
-  int a = 0;
-  int date;
-
-  void yespressed(int a) {
-    String textstr = '';
-    if (a == 1) {
-      textstr =
-          'Enter the date of your 1st dose for COVISHIELD Vaccine in the form DDMMYYYY';
-      textstr =
-          ("Take the 2nd dose of vaccine within 84-112 days from $date. ");
-    } else
-      textstr =
-          'Great, you are now vaccinated! Thank you showing your trust in Indian Vaccine COVISHIELD';
-
-    setState(() {
-      str = textstr;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,15 +36,15 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
-                        // IconButton(
-                        //   onPressed: () {
-                        //     Navigator.pushReplacementNamed(context, '/home');
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.arrow_back_ios_new,
-                        //     color: Colors.white,
-                        //   ),
-                        // ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: FaIcon(
+                          FontAwesomeIcons.angleLeft),
+                            color: Color(0xff252A34),
+                          ),
+                        
                       ],
                     ),
                     SizedBox(
@@ -254,13 +220,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Center(
-                        child: Text(str == null ? "" : "${str.toString()}",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500)),
-                      )
+                     
                     ],
                   ),
                 ),

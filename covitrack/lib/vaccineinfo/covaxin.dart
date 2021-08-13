@@ -2,48 +2,12 @@ import 'dart:io';
 
 import 'package:covitrack/screens/vaccine.dart';
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(Covaxin());
 }
 
 class Covaxin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Covaxin',
-        home: VaccineInfo());
-  }
-}
-
-class VaccineInfo extends StatefulWidget {
-  const VaccineInfo({Key key}) : super(key: key);
-
-  @override
-  _VaccineInfoState createState() => _VaccineInfoState();
-}
-
-class _VaccineInfoState extends State<VaccineInfo> {
-  String str = '';
-  String str2 = '';
-  int a = 0;
-  int date;
-
-  void yespressed(int a) {
-    String textstr = '';
-    if (a == 1) {
-      textstr =
-          ('Enter the date of your 1st dose for COVAXIN Vaccine in the form DDMMYYYY');
-      textstr = ("Take the 2nd dose of vaccine within 28-42 days from $date. ");
-    } else
-      textstr =
-          'Great, you are now vaccinated! Thank you showing your trust in Indian Vaccine COVAXIN';
-
-    setState(() {
-      str = textstr;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,15 +31,15 @@ class _VaccineInfoState extends State<VaccineInfo> {
                   children: [
                     Row(
                       children: [
-                        // IconButton(
-                        //   onPressed: () {
-                        //     Navigator.pop(context);
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.arrow_back_ios_new,
-                        //     color: Colors.white,
-                        //   ),
-                        // ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: FaIcon(
+                          FontAwesomeIcons.angleLeft),
+                            color: Color(0xff252A34),
+                          ),
+                        
                       ],
                     ),
                     SizedBox(
@@ -245,12 +209,7 @@ class _VaccineInfoState extends State<VaccineInfo> {
                           ),
                         ),
                       ),
-                      Center(
-                        child: Text(str == null ? "" : "${str.toString()}",style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500)),
-                      ),
+        
                     ],
                   ),
                 ),
