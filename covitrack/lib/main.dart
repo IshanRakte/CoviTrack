@@ -13,8 +13,11 @@ import 'package:covitrack/screens/symptoms.dart';
 import 'package:covitrack/screens/vaccine.dart';
 import 'package:covitrack/tracker/tracker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
