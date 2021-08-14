@@ -153,46 +153,61 @@ class Sputnik extends StatelessWidget {
                       Text(
                           'Made by the Gamaleya Research Institute of Epidemiology and Microbiology in Russia. In India, Dr. Reddy’s Laboratories is the local distribution partner for Sputnik-V',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                          style: TextStyle( fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
-                          )),
+                          )),SizedBox(height: 20,),
                       Text('Appearance: The solution is Colourless.',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                          style: TextStyle( fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
-                          )),
+                          )),SizedBox(height: 20,),
                       Text(
-                        'Price:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                        'Price: Rs 995-1145',
+                        style: TextStyle( fontSize: 18,
+                          // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      Text('Rs 995-1200',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                              color: Colors.white
+                      // Text('Rs 995-1200',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontWeight: FontWeight.bold,
+                      //         color: Colors.white
 
-                          )),
+                      //     )),
+                      SizedBox(height: 20,),
                       Text('Gap between two doses: 3-4 weeks',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                           )),
+                          SizedBox(height: 20,),
                       Text(
                           'Age: Approved for 18+(Dose adjustments for every age group may vary',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            // fontWeight: FontWeight.bold,
+                             fontSize: 18,
+                              color: Colors.white
+
+                          )),SizedBox(height: 20,),
+
+
+                          Text(
+                          'Note: If you have suffered from Covid-19 before or after 1st dose of vaccination then the Ministry of Health and Family Welfare (MoHFW) suggests to take the vaccine after 3 months.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            // fontWeight: FontWeight.bold,
+                             fontSize: 18,
                               color: Colors.white
 
                           )),
