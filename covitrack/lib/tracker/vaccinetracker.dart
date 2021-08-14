@@ -91,8 +91,18 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                     "$ind",
                     style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
                   ),
+                  SizedBox(height: 55,),
                   Text(
-                    "$ind2",
+                    "Total Vaccinated",
+                    style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "(At least one dose)",
+                    style: TextStyle(fontSize: 18, color: Colors.white, ),
+                  ),
+                  SizedBox(height: 10,),
+                  Text(
+                    "$ind2".substring(1, ind2.length - 1),
                     style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
                   ),
 
@@ -111,7 +121,7 @@ class _VaccineTrackerState extends State<VaccineTracker> {
 
   Future<List> getData() async {
     var response = await Dio().get(url);
-    return response.data['country'];
+    return response.data;
   }
 
   Future<Map<String,dynamic>>
