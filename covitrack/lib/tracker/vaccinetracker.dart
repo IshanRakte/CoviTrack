@@ -367,7 +367,7 @@ class _VaccineTrackerState extends State<VaccineTracker> {
                                             childAspectRatio: 1.0,
                                             crossAxisSpacing: 10.0,
                                             mainAxisSpacing: 10.0),
-                                    itemCount: 36,
+                                    itemCount: 216,
                                     itemBuilder: (BuildContext context, index) =>
                                         SizedBox(
                                             height: 50.0,
