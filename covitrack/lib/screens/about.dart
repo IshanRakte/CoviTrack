@@ -287,6 +287,20 @@ class _AboutState extends State<About> {
                                         });
                                       },
                                       child: Text('https://www.mohfw.gov.in/')),
+
+                                      Text(
+                                    "Vaccine Tracker Stats -",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  TextButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          _launched = _launchUniversalLinkIos(
+                                              'https://disease.sh/');
+                                        });
+                                      },
+                                      child: Text('https://disease.sh/')),
+                                      
                                   Text(
                                     "Precautions And Symptoms -",
                                     style: TextStyle(fontSize: 18),

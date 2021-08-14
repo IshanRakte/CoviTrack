@@ -64,7 +64,7 @@ class Covaxin extends StatelessWidget {
                   endIndent: 20,
                   color: Color(0xff252A34),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 5,),
               // SizedBox(
               //   height: 50,
               // ),
@@ -75,65 +75,9 @@ class Covaxin extends StatelessWidget {
                     children: [
                       Container(
                         // padding: EdgeInsets.all(5),
-                        child: Image.asset('assets/covaxin2.png',width: 230,),
+                        child: Image.asset('assets/covaxin2.png',width: 150,),
                       ),
-                      // SizedBox(height: 10,),
-
-                     
-                      // Text(''),
-                      // Text(''),
-                      // Text('Press 1 if taken 1st dose of the vaccine.',
-                      //     textAlign: TextAlign.left,
-                      //     style: TextStyle(
-                      //       fontWeight: FontWeight.bold,
-                      //     )),
-                      // Text('Press 2 if taken both the doses of the vaccine.',
-                      //     textAlign: TextAlign.left,
-                      //     style: TextStyle(
-                      //       fontWeight: FontWeight.bold,
-                      //     )),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.center,
-                      //   children: [
-                      //     TextButton(
-                      //         onPressed: () {
-                      //           yespressed(1);
-                      //         },
-                      //         child: Text(
-                      //           '1',
-                      //           style: TextStyle(
-                      //               fontSize: 20,
-                      //               fontWeight: FontWeight.bold,
-                      //               color: Colors.black87),
-                      //         )),
-                      //     TextButton(
-                      //         onPressed: () {
-                      //           yespressed(2);
-                      //         },
-                      //         child: Text(
-                      //           '2',
-                      //           style: TextStyle(
-                      //               fontSize: 20,
-                      //               fontWeight: FontWeight.bold,
-                      //               color: Colors.black87),
-                      //         )),
-                      //   ],
-                      // ),
-                      // Container(
-                      //   child: TextField(
-                      //     onChanged: (value) {
-                      //       date = int.parse(value);
-                      //     },
-                      //     keyboardType: TextInputType.datetime,
-                      //     decoration: InputDecoration(
-                      //         filled: true,
-                      //         fillColor: Colors.grey[35],
-                      //         hintText: 'Date of 1st Dose',
-                      //         border: OutlineInputBorder(
-                      //             borderRadius: BorderRadius.circular(2.0),
-                      //             borderSide: BorderSide.none)),
-                      //   ),
-                      // ),
+          
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
@@ -154,52 +98,71 @@ class Covaxin extends StatelessWidget {
                           "COVAXINTM, India's indigenous COVID-19 vaccine Bharat Biotech is developed in collaboration with the ICMR-NIV.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                           )),
+                              SizedBox(height: 20,),
                       Text('Appearance: The solution is Colourless.',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
-                          )),
-                      Text('Price:',
+                          )), SizedBox(height: 20,),
+                      Text('Price: Rs 400 in government hospitals',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                           )),
-                      Text('Rs 400 in government hospitals',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                              color: Colors.white
+                      // Text('Rs 400 in government hospitals',
+                      //     textAlign: TextAlign.left,
+                      //     style: TextStyle(
+                      //       fontSize: 18,
+                      //       // fontWeight: FontWeight.bold,
+                      //         color: Colors.white
 
-                          )),
+                      //     )),
                       Text(
-                        'Rs 1200-1500 in Private hospitals',
+                        'Rs 1200-1410 in Private hospitals',
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                         ),
                       ),
+                          SizedBox(height: 20,),
                       Text('Gap between the Two doses: 4-6 week',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
                               color: Colors.white
 
                           )),
+                              SizedBox(height: 20,),
                       Text(
                           'Age : Approved for above 12+(Dose adjustments for every age group may vary)',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            // fontWeight: FontWeight.bold,
+                              color: Colors.white
+
+                          )), SizedBox(height: 20,),
+                           Text(
+                          'Note: If you have suffered from Covid-19 before or after 1st dose of vaccination then the Ministry of Health and Family Welfare (MoHFW) suggests to take the vaccine after 3 months.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            // fontWeight: FontWeight.bold,
+                             fontSize: 18,
                               color: Colors.white
 
                           )),

@@ -82,61 +82,6 @@ class Covishield extends StatelessWidget {
                         child: Image.asset('assets/covishield.jpg',width: 230,),
                       ),
                       SizedBox(height: 10,),
- 
-                      
-                      // Text(''),
-                      // Text('Press 1 if taken 1st dose of the vaccine.',
-                      //     textAlign: TextAlign.left,
-                      //     style: TextStyle(
-                      //       fontWeight: FontWeight.bold,
-                      //     )),
-                      // Text('Press 2 if taken both the doses of the vaccine.',
-                      //     textAlign: TextAlign.left,
-                      //     style: TextStyle(
-                      //       fontWeight: FontWeight.bold,
-                      //     )),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.center,
-                      //   children: [
-                      //     TextButton(
-                      //         onPressed: () {
-                      //           yespressed(1);
-                      //         },
-                      //         child: Text(
-                      //           '1',
-                      //           style: TextStyle(
-                      //               fontSize: 20,
-                      //               fontWeight: FontWeight.bold,
-                      //               color: Colors.black87),
-                      //         )),
-                      //     TextButton(
-                      //         onPressed: () {
-                      //           yespressed(2);
-                      //         },
-                      //         child: Text(
-                      //           '2',
-                      //           style: TextStyle(
-                      //               fontSize: 20,
-                      //               fontWeight: FontWeight.bold,
-                      //               color: Colors.black87),
-                      //         )),
-                      //   ],
-                      // ),
-                      // Container(
-                      //   child: TextField(
-                      //     onChanged: (value) {
-                      //       date = int.parse(value);
-                      //     },
-                      //     keyboardType: TextInputType.datetime,
-                      //     decoration: InputDecoration(
-                      //         filled: true,
-                      //         fillColor: Colors.grey[35],
-                      //         hintText: 'Date of 1st Dose',
-                      //         border: OutlineInputBorder(
-                      //             borderRadius: BorderRadius.circular(2.0),
-                      //             borderSide: BorderSide.none)),
-                      //   ),
-                      // ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
@@ -154,59 +99,76 @@ class Covishield extends StatelessWidget {
                               children: [
                                 SizedBox(height: 5,),
                         Text(
-                            'The Serum Institute Of India and Indian council are jointly conducting a phase II/III.',
+                            'It was developed by Oxford University in partnership with British-Swedish firm AstraZeneca. It is being manufactured in India by Pune-based Serum Institute of India (SII).',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              // fontWeight: FontWeight.bold,
+                               fontSize: 18,
                               color: Colors.white
 
                             )),
+                             SizedBox(height: 20,),
                         Text(
                             'Appearance: The solution is Colourless to slightly Brown with pH=6.6.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              // fontWeight: FontWeight.bold,
+                               fontSize: 18,
                               color: Colors.white
 
                             )),
+                             SizedBox(height: 20,),
                         Text(
-                          'Price:',
+                          'Price: Currently FREE in Government hospitals',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            // fontWeight: FontWeight.bold,
+                             fontSize: 18,
                               color: Colors.white
 
                           ),
                           textAlign: TextAlign.left,
                         ),
-                        Text('Currently FREE in Government hospitals',
+                        // Text('Currently FREE in Government hospitals',
+                        //     textAlign: TextAlign.left,
+                        //     style: TextStyle(
+                        //       fontWeight: FontWeight.bold,
+                        //       color: Colors.white
+
+                        //     )),
+                        Text('Rs 500-780 in Private hospitals',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              // fontWeight: FontWeight.bold,
+                               fontSize: 18,
                               color: Colors.white
 
-                            )),
-                        Text('Rs 500-800 in Private hospitals',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-
-                            )),
+                            )), SizedBox(height: 20,),
                         Text('Gap between the Two doses: 12-16 weeks',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              // fontWeight: FontWeight.bold,
+                               fontSize: 18,
                               color: Colors.white
 
-                            )),
+                            )), SizedBox(height: 20,),
                         Text(
                             'Age: Approved for 18+(Dose adjustments for every age group may vary',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                              // fontWeight: FontWeight.bold,
+                               fontSize: 18,
                               color: Colors.white
 
-                            )),
+                            )), SizedBox(height: 20,),
+                             Text(
+                          'Note: If you have suffered from Covid-19 before or after 1st dose of vaccination then the Ministry of Health and Family Welfare (MoHFW) suggests to take the vaccine after 3 months.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            // fontWeight: FontWeight.bold,
+                             fontSize: 18,
+                              color: Colors.white
+
+                          )),
                         // Text('Are you Vaccinated with COVISHIELD?',
                         //     textAlign: TextAlign.center,
                         //     style: TextStyle(
