@@ -206,7 +206,7 @@ class HomePage extends StatelessWidget {
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             children: [
                                               Text(
-                                                'Vaccine Tracker >',
+                                                'Vaccine \nTracker >',
                                                 style: TextStyle(
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.bold,
@@ -251,7 +251,7 @@ class HomePage extends StatelessWidget {
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             children: [
                                               Text(
-                                                'Vaccine Info >',
+                                                'Vaccine \nInfo     >',
                                                 style: TextStyle(
                                                   color: Colors.black,
                                                   fontWeight: FontWeight.bold,
