@@ -50,15 +50,15 @@ samples, guidance on mobile development, and a full API reference. -->
 
 **Ishan Rakte**
 
-- [Github Profile](https://github.com/IshanRakte){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/ishanrakte/){target="_blank"}
+- [Github Profile](https://github.com/IshanRakte target="_blank"){:target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi! ){:target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/ishanrakte/ target="_blank"){:target="_blank"}
   
 **Rugved Rajandekar**
 
-- [Github Profile](https://github.com/RugvedR){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/){target="_blank"}
+- [Github Profile](https://github.com/RugvedR){:target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){:target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/){:target="_blank"}
   
 **Prakhar Rai**
 
