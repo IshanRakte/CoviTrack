@@ -15,11 +15,11 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference. -->
 
-<h1 align="center"><project-name></h1>
+<h1 align="center">CoviTrack: The COVID-19 Tracer</h1>
 
 <p align="center"><project-description></p>
 
-## Links
+<!-- ## Links
 
 - [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
 
@@ -27,11 +27,11 @@ samples, guidance on mobile development, and a full API reference. -->
 
 - [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
 
-- [API](<API Link> "API")
+- [API](<API Link> "API") -->
 
 ## Screenshots
 
-![Home Page](https://drive.google.com/file/d/1slLLf8wzvzTGtwv8yYhkg5lR8-V4o5Hp/view?usp=sharing)
+![Home Page](sceenshots/Untitled (2).jpg)
 
 ![](/screenshots/2.png)
 
@@ -52,7 +52,7 @@ samples, guidance on mobile development, and a full API reference. -->
 
 - [Github Profile](https://github.com/IshanRakte)
 - [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!" )
-- [LinkedIn](https://www.linkedin.com/in/ishanrakte/ target="_blank")
+- [LinkedIn](https://www.linkedin.com/in/ishanrakte/)
   
 **Rugved Rajandekar**
 
