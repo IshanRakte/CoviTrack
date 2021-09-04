@@ -57,7 +57,7 @@ samples, guidance on mobile development, and a full API reference. -->
 **Rugved Rajandekar**
 
 - [Github Profile](https://github.com/RugvedR)
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [Email](mailto:rugvedr9@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/)
   
 **Prakhar Rai**
