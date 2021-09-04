@@ -46,43 +46,43 @@ samples, guidance on mobile development, and a full API reference. -->
 
 - [ ] Reliable Storage
 
-## Author
+## Authors
 
 **Ishan Rakte**
 
-- [Github Profile](https://github.com/IshanRakte target="_blank"){:target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi! ){:target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/ishanrakte/ target="_blank"){:target="_blank"}
+- [Github Profile](https://github.com/IshanRakte)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!" )
+- [LinkedIn](https://www.linkedin.com/in/ishanrakte/ target="_blank")
   
 **Rugved Rajandekar**
 
-- [Github Profile](https://github.com/RugvedR){:target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){:target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/){:target="_blank"}
+- [Github Profile](https://github.com/RugvedR)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/)
   
 **Prakhar Rai**
 
-- [Profile](https://github.com/IshanRakte){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/prakhar-rai-1142002/){target="_blank"}
+- [Profile](https://github.com/IshanRakte)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/prakhar-rai-1142002/)
   
 **Tushar Raikar**
 
-- [Profile](https://github.com/IshanRakte){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/tushar-raikar-305b2921a/){target="_blank"}
+- [Profile](https://github.com/IshanRakte)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/tushar-raikar-305b2921a/)
 
 **Subhash Rajpurohit**
 
-- [Profile](https://github.com/IshanRakte){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/subhash-rajpurohit-820664209/){target="_blank"}
+- [Profile](https://github.com/IshanRakte)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/subhash-rajpurohit-820664209/)
   
 **Nishad Ranade**
 
-- [Profile](https://github.com/IshanRakte){target="_blank"}
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
-- [LinkedIn](https://www.linkedin.com/in/nishad-ranade-52ab36208/){target="_blank"}
+- [Profile](https://github.com/IshanRakte)
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/nishad-ranade-52ab36208/)
 
 ## 🤝 Support
 
