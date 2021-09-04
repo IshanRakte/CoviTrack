@@ -31,38 +31,11 @@ samples, guidance on mobile development, and a full API reference. -->
 
 ## Screenshots
 
-![Home Page](/screenshots/1.png "Home Page")
+![Home Page](https://drive.google.com/file/d/1slLLf8wzvzTGtwv8yYhkg5lR8-V4o5Hp/view?usp=sharing)
 
 ![](/screenshots/2.png)
 
 ![](/screenshots/3.png)
-
-## Available Commands
-
-In the project directory, you can run:
-
-### `npm start" : "react-scripts start"`,
-
-The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### `"npm run build": "react-scripts build"`,
-
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
-
-### `"npm run test": "react-scripts test"`,
-
-Launches the test runner in the interactive watch mode.
-
-### `"npm run dev": "concurrently "nodemon server" "npm run start"`,
-
-For running the server and app together I am using concurrently this helps a lot in the MERN application as it runs both the server (client and server) concurrently. So you can work on them both together.
-
-### `"serve": "node server"`
-
-For running the server file on you can use this command.
-
-### `npm run serve`
 
 ## Built With
 
@@ -77,9 +50,39 @@ For running the server file on you can use this command.
 
 **Ishan Rakte**
 
-- [Profile](https://github.com/IshanRakte")
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
-- [LinkedIn](https://www.linkedin.com/in/ishanrakte/")
+- [Github Profile](https://github.com/IshanRakte){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/ishanrakte/){target="_blank"}
+  
+**Rugved Rajandekar**
+
+- [Github Profile](https://github.com/RugvedR){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/){target="_blank"}
+  
+**Prakhar Rai**
+
+- [Profile](https://github.com/IshanRakte){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/prakhar-rai-1142002/){target="_blank"}
+  
+**Tushar Raikar**
+
+- [Profile](https://github.com/IshanRakte){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/tushar-raikar-305b2921a/){target="_blank"}
+
+**Subhash Rajpurohit**
+
+- [Profile](https://github.com/IshanRakte){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/subhash-rajpurohit-820664209/){target="_blank"}
+  
+**Nishad Ranade**
+
+- [Profile](https://github.com/IshanRakte){target="_blank"}
+- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!){target="_blank"}
+- [LinkedIn](https://www.linkedin.com/in/nishad-ranade-52ab36208/){target="_blank"}
 
 ## 🤝 Support
 
