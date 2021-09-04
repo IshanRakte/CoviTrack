@@ -10,7 +10,6 @@ import 'package:covitrack/tracker/vaccinetracker.dart';
 import 'package:covitrack/screens/emergency.dart';
 import 'package:covitrack/screens/precautions.dart';
 import 'package:covitrack/screens/symptoms.dart';
-import 'package:covitrack/screens/vaccine.dart';
 import 'package:covitrack/tracker/tracker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/services.dart';
@@ -21,45 +20,51 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
-        '/casetracker': (context) => CaseTracker(),
-        '/bnbsymptoms': (context) => bottomNavTracker2(),
-        '/vaccine_info': (context) => bottomNavTracker3(),
-        '/symptoms': (context) => Symptoms(),
-        '/precautions': (context) => Precautions(),
-        '/emergency': (context) => Emergency(),
-        '/bottomnavtracker': (context) => bottomNavTracker(),
-        '/home': (context) => HomePage(),
-        '/vaccinetracker': (context) => VaccineTracker(),
-        '/about': (context) => About()
-      },
-
-      home: SplashScreen(),
+      '/casetracker': (context) => CaseTracker(),
+      '/bnbsymptoms': (context) => bottomNavTracker2(),
+      '/vaccine_info': (context) => bottomNavTracker3(),
+      '/symptoms': (context) => Symptoms(),
+      '/precautions': (context) => Precautions(),
+      '/emergency': (context) => Emergency(),
+      '/bottomnavtracker': (context) => bottomNavTracker(),
+      '/home': (context) => HomePage(),
+      '/vaccinetracker': (context) => VaccineTracker(),
+      '/about': (context) => About()
+    },
+    home: SplashScreen(),
   ));
 }
-
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Container(
-       color: Color(0xffEAEAEA),
-       child: SafeArea(
+      body: Container(
+        color: Color(0xffEAEAEA),
+        child: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 28,),
+              SizedBox(
+                height: 28,
+              ),
               Row(
                 children: [
-                  SizedBox(width: 17.0,),
-                  FaIcon(FontAwesomeIcons.home, size: 30,),
-                  SizedBox(width: 20,),
+                  SizedBox(
+                    width: 17.0,
+                  ),
+                  FaIcon(
+                    FontAwesomeIcons.home,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
                   Text(
                     'Home',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff252A34)
-                    ),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff252A34)),
                   ),
                 ],
               ),
@@ -70,64 +75,74 @@ class HomePage extends StatelessWidget {
                 color: Color(0xff252A34),
                 endIndent: 20,
               ),
-              
-              SizedBox(height: 28,),
+
+              SizedBox(
+                height: 28,
+              ),
               Expanded(
                 child: SingleChildScrollView(
-                      physics: BouncingScrollPhysics(),
+                  physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
                       Center(
                         child: Card(
                           elevation: 4,
-                          
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
-                            child: Container(
-                              color: Color(0xff08D9D6),
-                              // decoration: BoxDecoration(
-                              //   gradient: LinearGradient(
-                              //     colors: [Colors.purple, Colors.blue],
-                              //     begin: Alignment.topLeft,
-                              //     end: Alignment.bottomRight,
-                              //   ),
-                              // ),
-                              width: 200,
-                              // padding: EdgeInsets.all(5),
-                              child: Material(
-                                color: Colors.transparent,
-                                child: InkWell(
-                                  onTap: (){
-                                    Navigator.pushNamed(context, '/bottomnavtracker');
-                                  },
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                      SizedBox(height: 65,),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            'Tracker >',
-                                            style: TextStyle(
-                                              color: Color(0xff252A34),
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                          child: Container(
+                            color: Color(0xff08D9D6),
+                            // decoration: BoxDecoration(
+                            //   gradient: LinearGradient(
+                            //     colors: [Colors.purple, Colors.blue],
+                            //     begin: Alignment.topLeft,
+                            //     end: Alignment.bottomRight,
+                            //   ),
+                            // ),
+                            width: 200,
+                            // padding: EdgeInsets.all(5),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, '/bottomnavtracker');
+                                },
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    SizedBox(
+                                      height: 65,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          'Tracker >',
+                                          style: TextStyle(
+                                            color: Color(0xff252A34),
+                                            fontWeight: FontWeight.bold,
                                           ),
-                                          SizedBox(width: 5,),
-                                        ],
-                                      ),
-                                      SizedBox(height: 5,),
-                                    ],
-                                  ),
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
+                          ),
                         ),
                       ),
-                      SizedBox(height: 15,),
+                      SizedBox(
+                        height: 15,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -136,15 +151,16 @@ class HomePage extends StatelessWidget {
                             width: 4,
                             color: Color(0xff08D9D6),
                           ),
-                          SizedBox(width: 6,),
+                          SizedBox(
+                            width: 6,
+                          ),
                           Text(
                             'Keep track of covid 19\ncases.',
                             style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 1,
-                              color: Color(0xff252A34)
-                            ),
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1,
+                                color: Color(0xff252A34)),
                           ),
                         ],
                       ),
@@ -154,12 +170,16 @@ class HomePage extends StatelessWidget {
                         indent: 20,
                         endIndent: 20,
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       //
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(width: 20,),
+                          SizedBox(
+                            width: 20,
+                          ),
                           // Container(
                           //   height: 24,
                           //   width: 20,
@@ -169,15 +189,16 @@ class HomePage extends StatelessWidget {
                           Text(
                             'More Features:',
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                              letterSpacing: 1,
-                              color: Color(0xff252A34)
-                            ),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                                letterSpacing: 1,
+                                color: Color(0xff252A34)),
                           ),
                         ],
                       ),
-                      SizedBox(height: 50,),
+                      SizedBox(
+                        height: 50,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -185,14 +206,18 @@ class HomePage extends StatelessWidget {
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
-                              side: BorderSide(width: 2, color: Colors.black,),
+                              side: BorderSide(
+                                width: 2,
+                                color: Colors.black,
+                              ),
                             ),
                             elevation: 4,
                             child: Material(
                               color: Colors.transparent,
                               child: InkWell(
-                                onTap: (){
-                                  Navigator.pushNamed(context, '/vaccinetracker');
+                                onTap: () {
+                                  Navigator.pushNamed(
+                                      context, '/vaccinetracker');
                                 },
                                 child: Column(
                                   children: [
@@ -200,10 +225,12 @@ class HomePage extends StatelessWidget {
                                       height: 65,
                                       width: 120,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               Text(
                                                 'Vaccine \nTracker >',
@@ -213,10 +240,14 @@ class HomePage extends StatelessWidget {
                                                   fontSize: 12,
                                                 ),
                                               ),
-                                              SizedBox(width: 5,),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
                                             ],
                                           ),
-                                          SizedBox(height: 5,),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -225,18 +256,23 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(width: 20,),
+                          SizedBox(
+                            width: 20,
+                          ),
                           Card(
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
-                              side: BorderSide(width: 2, color: Colors.black,),
+                              side: BorderSide(
+                                width: 2,
+                                color: Colors.black,
+                              ),
                             ),
                             elevation: 4,
                             child: Material(
                               color: Colors.transparent,
                               child: InkWell(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.pushNamed(context, '/vaccine_info');
                                 },
                                 child: Column(
@@ -245,10 +281,12 @@ class HomePage extends StatelessWidget {
                                       height: 65,
                                       width: 120,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               Text(
                                                 'Vaccine \nInfo     >',
@@ -258,10 +296,14 @@ class HomePage extends StatelessWidget {
                                                   fontSize: 12,
                                                 ),
                                               ),
-                                              SizedBox(width: 5,),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
                                             ],
                                           ),
-                                          SizedBox(height: 5,),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -272,7 +314,9 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -280,13 +324,16 @@ class HomePage extends StatelessWidget {
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
-                              side: BorderSide(width: 2, color: Color(0xff252A34),),
+                              side: BorderSide(
+                                width: 2,
+                                color: Color(0xff252A34),
+                              ),
                             ),
                             elevation: 4,
                             child: Material(
                               color: Colors.transparent,
                               child: InkWell(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.pushNamed(context, '/bnbsymptoms');
                                 },
                                 child: Column(
@@ -295,10 +342,12 @@ class HomePage extends StatelessWidget {
                                       height: 65,
                                       width: 120,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               Text(
                                                 'Symptoms >',
@@ -308,10 +357,14 @@ class HomePage extends StatelessWidget {
                                                   fontSize: 12,
                                                 ),
                                               ),
-                                              SizedBox(width: 5,),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
                                             ],
                                           ),
-                                          SizedBox(height: 5,),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -320,18 +373,23 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(width: 20,),
+                          SizedBox(
+                            width: 20,
+                          ),
                           Card(
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
-                              side: BorderSide(width: 2, color: Color(0xff252A34),),
+                              side: BorderSide(
+                                width: 2,
+                                color: Color(0xff252A34),
+                              ),
                             ),
                             elevation: 4,
                             child: Material(
                               color: Colors.transparent,
                               child: InkWell(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.pushNamed(context, '/precautions');
                                 },
                                 child: Column(
@@ -340,10 +398,12 @@ class HomePage extends StatelessWidget {
                                       height: 65,
                                       width: 120,
                                       child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               Text(
                                                 'Precautions >',
@@ -353,10 +413,14 @@ class HomePage extends StatelessWidget {
                                                   fontSize: 12,
                                                 ),
                                               ),
-                                              SizedBox(width: 5,),
+                                              SizedBox(
+                                                width: 5,
+                                              ),
                                             ],
                                           ),
-                                          SizedBox(height: 5,),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -367,61 +431,72 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Center(
                         child: Card(
                           elevation: 4,
                           // shadowColor: Colors.red,
-                          
+
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
-                            child: Container(
-                              color: Color(0xffFF2E63),
-                              // decoration: BoxDecoration(
-                              //   gradient: LinearGradient(
-                              //     colors: [Colors.redAccent, Colors.red],
-                              //     begin: Alignment.topCenter,
-                              //     end: Alignment.bottomCenter,
-                              //   ),
-                              // ),
-                              width: 270,
-                              child: Material(
-                                color: Colors.transparent,
-                                child: InkWell(
-                                  // splashColor: Colors.red,
-                                  onTap: (){
-                                    Navigator.pushNamed(context, '/emergency');
-                                  },
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                      SizedBox(height: 55,),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            'Emergency Info >',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                          child: Container(
+                            color: Color(0xffFF2E63),
+                            // decoration: BoxDecoration(
+                            //   gradient: LinearGradient(
+                            //     colors: [Colors.redAccent, Colors.red],
+                            //     begin: Alignment.topCenter,
+                            //     end: Alignment.bottomCenter,
+                            //   ),
+                            // ),
+                            width: 270,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: InkWell(
+                                // splashColor: Colors.red,
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/emergency');
+                                },
+
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    SizedBox(
+                                      height: 55,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          'Emergency Info >',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
                                           ),
-                                          SizedBox(width: 5,),
-                                        ],
-                                      ),
-                                      SizedBox(height: 5,),
-                                    ],
-                                  ),
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
+                          ),
                         ),
-                        
                       ),
-                      TextButton(onPressed: (){
-                                  Navigator.pushNamed(context, '/about');}, child: Text("About")),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/about');
+                          },
+                          child: Text("About")),
                     ],
                   ),
                 ),
@@ -429,9 +504,8 @@ class HomePage extends StatelessWidget {
               //
             ],
           ),
-
         ),
-     ),
+      ),
     );
   }
 }

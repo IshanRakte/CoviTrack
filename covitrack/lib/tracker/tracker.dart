@@ -593,52 +593,52 @@ class _CaseTrackerState extends State<CaseTracker> {
                       ],
                     ),
                   ),
-                  //
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    height: 90,
-                    width: double.infinity,
-                    color: Colors.grey[300],
-                    padding: EdgeInsets.all(8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Total affected Countries',
-                          style: TextStyle(
-                            // fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        FutureBuilder<Tcases>(
-                            future: getJsonData(),
-                            builder: (BuildContext context, Snapshot) {
-                              if (Snapshot.hasData) {
-                                final covid = Snapshot.data;
-                                return Text(
-                                  '${covid?.affectedCountries}',
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                );
-                              } else if (Snapshot.hasError) {
-                                return Text(Snapshot.error.toString());
-                              } else
-                                return CircularProgressIndicator(
-                                  valueColor:
-                                      AlwaysStoppedAnimation<Color>(Colors.black),
-                                );
-                            }),
-                      ],
-                    ),
-                  ),
+                  // //
+                  // SizedBox(
+                  //   height: 15,
+                  // ),
+                  // Container(
+                  //   height: 90,
+                  //   width: double.infinity,
+                  //   color: Colors.grey[300],
+                  //   padding: EdgeInsets.all(8),
+                  //   child: Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: [
+                  //       Text(
+                  //         'Total affected Countries',
+                  //         style: TextStyle(
+                  //           // fontWeight: FontWeight.bold,
+                  //           fontSize: 18,
+                  //         ),
+                  //       ),
+                  //       SizedBox(
+                  //         height: 8,
+                  //       ),
+                  //       FutureBuilder<Tcases>(
+                  //           future: getJsonData(),
+                  //           builder: (BuildContext context, Snapshot) {
+                  //             if (Snapshot.hasData) {
+                  //               final covid = Snapshot.data;
+                  //               return Text(
+                  //                 '${covid?.affectedCountries}',
+                  //                 style: TextStyle(
+                  //                   fontSize: 22,
+                  //                   fontWeight: FontWeight.bold,
+                  //                   color: Colors.black,
+                  //                 ),
+                  //               );
+                  //             } else if (Snapshot.hasError) {
+                  //               return Text(Snapshot.error.toString());
+                  //             } else
+                  //               return CircularProgressIndicator(
+                  //                 valueColor:
+                  //                     AlwaysStoppedAnimation<Color>(Colors.black),
+                  //               );
+                  //           }),
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
               
