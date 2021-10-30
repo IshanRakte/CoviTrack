@@ -1,87 +1,81 @@
-<!-- # covitrack
-
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference. -->
-
+<p align="center">
+<img src="https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/promopic2.jpg" width = "306" height = "306" class="center">
+</p>
 <h1 align="center">CoviTrack: The COVID-19 Tracer</h1>
 
-<p align="center"><project-description></p>
+<p align="center">The purpose of Covi-Track is to provide users a flexible User-Interface (UI) with effectiveness and also with various features all at one particular place. Features which the application includes are namely Vaccine-Info, Vaccine Tracker, Emergency Info, Symptoms, Precautions, Oxy-Pulse measure, Tracker (Country-wise stats and Indian State-wise stats). All these features make the use of APIs and is coded in Dart Programming language with Flutter as SDK.</p>
 
-<!-- ## Links
 
-- [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
+## 📱 Screenshots
 
-- [Live](<Homepage url> "Live View")
+<table>
+  <tr>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/homepage.jpg" alt = "Home Page" width = "216" height = "384"></td>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/tracker.jpg" alt = "Tracker" width = "216" height = 384"></td>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/indiatracker.jpg" alt = "India Tracker" width = "216" height = "384"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/precautions.jpg" alt = "Precautions" width = "216" height = "384"></td>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/emergency.jpg" alt = "Emergency" width = "216" height = "384"></td>
+    <td><img src = "https://github.com/IshanRakte/covitrack/blob/main/covitrack/screenshots/emergencypune.jpg" alt = "Emergency Pune" width = "216" height = "384"></td>
+  </tr>
+</table>
 
-- [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
-
-- [API](<API Link> "API") -->
-
-## Screenshots
-
-![Home Page](sceenshots/Untitled (2).jpg)
-
-![](/screenshots/2.png)
-
-![](/screenshots/3.png)
-
-## Built With
+## 🏗️ Built With
 
 - Flutter
 - Dart
 
-## Future Updates
+## 💡 Future Updates
 
-- [ ] Reliable Storage
+- Search Bar in Tracker
 
-## Authors
+## 🌐 APIS Used
+- [Link](https://meme-api.herokuapp.com/gimme/wholesomememes)
+- [GitHub Repo Link](https://github.com/D3vd/Meme_Api)
+
+## 📋 Dependencies Used
+- font_awesome_flutter: ^9.1.0
+- url_launcher: ^6.0.9
+- http: ^0.13.3
+- dio: ^4.0.0
+
+## ✍️Authors
 
 **Ishan Rakte**
 
-- [Github Profile](https://github.com/IshanRakte)
+- [GitHub Profile](https://github.com/IshanRakte)
 - [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!" )
 - [LinkedIn](https://www.linkedin.com/in/ishanrakte/)
   
 **Rugved Rajandekar**
 
-- [Github Profile](https://github.com/RugvedR)
+- [GitHub Profile](https://github.com/RugvedR)
 - [Email](mailto:rugvedr9@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/rugved-rajandekar-796671208/)
   
 **Prakhar Rai**
 
-- [Profile](https://github.com/IshanRakte)
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [GitHub Profile](https://github.com/Prakhar1142002)
+- [Email](mailto:prakhar1142002@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/prakhar-rai-1142002/)
   
 **Tushar Raikar**
 
-- [Profile](https://github.com/IshanRakte)
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [GitHub Profile](https://github.com/TusharRaikar)
+- [Email](mailto:raikartusharr@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/tushar-raikar-305b2921a/)
 
 **Subhash Rajpurohit**
 
-- [Profile](https://github.com/IshanRakte)
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [Email](mailto:subhashprajpurohit@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/subhash-rajpurohit-820664209/)
   
 **Nishad Ranade**
 
-- [Profile](https://github.com/IshanRakte)
-- [Email](mailto:ishan.rakte@gmail.com?subject=Hi "Hi!")
+- [Email](mailto:ranadenishad1729@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/nishad-ranade-52ab36208/)
 
 ## 🤝 Support
