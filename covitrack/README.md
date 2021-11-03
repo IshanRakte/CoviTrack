@@ -33,15 +33,28 @@
 - Search Bar in Tracker
 
 ## 🌐 APIS Used
-- [Link](https://meme-api.herokuapp.com/gimme/wholesomememes)
-- [GitHub Repo Link](https://github.com/D3vd/Meme_Api)
+- [Worldwide API](https://disease.sh/v3/covid-19/all)
+- [Worldwide Countrywise API](https://corona.lmao.ninja/v2/countries)
+- [India Statewise API](https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true)
+- [Vaccination API](https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1)
+
 
 ## 📋 Dependencies Used
 - font_awesome_flutter: ^9.1.0
 - url_launcher: ^6.0.9
 - http: ^0.13.3
 - dio: ^4.0.0
+    
+## 📜 Privacy Policy
+ - [Link](https://github.com/sprintdevelopers/privacy-policy/blob/main/privacy-policy.md)
 
+## 📲 Download Link      
+ - [Link*](https://drive.google.com/file/d/1IVsRBYkIKaXbzZdwutCwpLDcQn1Er2MF/view?usp=sharing)
+ - *This link does NOT redirect to Google Play Store. Our initial plans were to release it on Google Play Store. But we got rejected as our app lies in the COVID-19 category and for now only Government is allowed to release apps in this category 💔. So, we are providing you with the apk file which you can install on your android device📱.
+ 
+      
+      
+      
 ## ✍️Authors
 
 **Ishan Rakte**
